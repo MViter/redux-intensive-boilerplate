@@ -1,0 +1,18 @@
+@import '../../theme/palette';
+
+.grid {
+  display: flex;
+  justify-content: center;
+  background-color: $paletteColor3;
+  flex-direction: row;
+  height: 100%;
+
+  .contentWrap {
+    width: 1180px;
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 120px;
+  }
+}
