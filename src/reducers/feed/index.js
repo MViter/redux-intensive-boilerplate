@@ -1,16 +1,14 @@
 // Core
-import { combineReducers } from 'redux';
-import { Map, List, fromJS } from 'immutable';
+import { Map, List } from 'immutable';
 
 // Instruments
 import types from 'actions/feed/types';
 
 const initialState = Map({
-    authors: Map(),
-    posts:   Map()
+    results: Map()
 });
 
-const result = (state = List(), { type, payload }) => {
+const feedReducer = (state = List(), { type, payload }) => {
     switch (type) {
         case types.FETCH_NEW_MOVIES_SUCCESS:
             return List(payload.result);
@@ -20,17 +18,5 @@ const result = (state = List(), { type, payload }) => {
     }
 };
 
-const entities = (state = initialState, { type, payload }) => {
-    switch (type) {
-        case types.FETCH_NEW_MOVIES_SUCCESS:
-            return fromJS(payload.entities);
+export default feedReducer;
 
-            default:
-                return state;
-    }
-};
-
-export default combineReducers({
-    entities,
-    result
-});

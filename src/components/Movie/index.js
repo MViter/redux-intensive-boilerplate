@@ -49,12 +49,9 @@ export default class Movie extends Component {
             vote_average
         } = this.props;
 
-
         const adaptedPoaterPath = 'https://image.tmdb.org/t/p/w500' + poster_path;
         const adaptedBackgroundPath = 'https://image.tmdb.org/t/p/w780' + backdrop_path;
 
-        console.log('poster_path', poster_path);
-        console.log('adaptedPoaterPath', adaptedPoaterPath);
         return (
 
             <section className = { Styles.movie }>

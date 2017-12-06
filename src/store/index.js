@@ -27,7 +27,7 @@ const logger = createLogger({
 
 const history = createHistory();
 
-const middleware = routerMiddleware(history); // for working with routes
+const middleware = [routerMiddleware(history)]; // for working with routes
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -40,7 +40,7 @@ if (dev) {
 }
 
 export { history };
-export default createStore(reducer, composeEnhancers(applyMiddleware(middleware)));
+export default createStore(reducer, composeEnhancers(applyMiddleware(...middleware)));
 // another way (p. 26) - export default createStore(reducer, applyMiddleware(logger));
 // or export default createStore(reducer, applyMiddleware(...middleware));
 
