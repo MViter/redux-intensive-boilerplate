@@ -9,8 +9,7 @@ import { api, apiKey } from 'instruments/api';
 
 export function* fetchNewMoviesWorker () {
     try {
-        console.log('In fetchNewMoviesWorker saga - 1');
-        console.log('In fetchNewMoviesWorker saga - 2');
+        console.log('In fetchNewMoviesWorker');
         yield put(uiActions.startFetchingFeed());
 
         // yield put(uiActions.startfetchingFeed());//const token = yield select((state) => state.profile.get('token'));

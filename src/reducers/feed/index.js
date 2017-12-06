@@ -11,7 +11,7 @@ const initialState = Map({
 const feedReducer = (state = List(), { type, payload }) => {
     switch (type) {
         case types.FETCH_NEW_MOVIES_SUCCESS:
-            return List(payload.result);
+            return List(payload.results);
 
         default:
             return state;
