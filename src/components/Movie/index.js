@@ -18,9 +18,6 @@ export default class Movie extends Component {
         this.handleLikeMovie = ::this._handleLikeMovie;
     }
 
-    componentWillMount() {
-
-    }
 
     state = {
         vote_count: 0,

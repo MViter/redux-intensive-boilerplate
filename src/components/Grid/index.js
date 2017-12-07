@@ -28,7 +28,7 @@ export default class Grid extends Component {
         return '';
     }
 
-    componentWillMount () {
+    componentDidMount () {
         this.props.dispatch(actions.fetchNewMovies());
     }
 
