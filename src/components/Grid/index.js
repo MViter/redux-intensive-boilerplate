@@ -1,20 +1,26 @@
 // Core
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 // Instruments
-import { array } from 'prop-types';
+import { array, object } from 'prop-types';
 import Styles from './styles.scss';
 
 
 // Components
 import Movie from '../Movie';
 import Navigation from '../Navigation';
+import actions from 'actions/feed';
 
-export default class Grid extends Component {
+class Grid extends Component {
 
     static propTypes =  {
         genres:  array.isRequired,
-        results: array.isRequired
+        results: object.isRequired
+    };
+
+    static defaultProps = {
+        results: []
     };
 
     mapGenreToGenreName(id, genres = []) {
@@ -36,7 +42,7 @@ export default class Grid extends Component {
 
         const { results, genres } = this.props;
 
-        const moovieArray = results.map(({
+        const movieArray = results.map(({
             vote_count,
             id,
             video,
@@ -88,9 +94,11 @@ export default class Grid extends Component {
                     <Navigation />
                 </div>
                 <div className = {  Styles.contentWrap }>
-                    { moovieArray }
+                    { movieArray }
                 </div>
             </section>
         );
     }
 }
+
+export default connect()(Grid);

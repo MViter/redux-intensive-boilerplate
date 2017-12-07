@@ -9,7 +9,7 @@ import { api, apiKey } from 'instruments/api';
 
 export function* fetchNewMoviesWorker () {
     try {
-        console.log('@@@In fetchNewMoviesWorker');
+
         yield put(uiActions.startFetchingFeed());
 
         const response = yield call(fetch, `${api}/3/movie/now_playing?api_key=${ apiKey }&page=1`, {
@@ -21,17 +21,18 @@ export function* fetchNewMoviesWorker () {
 
         console.log('response = ', response);
 
-        const { data: movies, message } = yield call([response, response.json]);
+        const { results } = yield call([response, response.json]);
 
-        if (response.status !== 200) {
-            throw new Error(message);
-        }
+        //console.log(yield call([response, response.json]));
+
+        // if (response.status !== 200) {
+        //     throw new Error(message);
+        // }
 
         //const normalizedMovies = normalize(movies, [post]);
 
-        //const movies = normalize(movies, [post]);
-
-        yield put(feedActions.fetchNewMoviewsSuccess(movies));
+        //const moviesNormalized = normalize(movies, [post]);
+        yield put(feedActions.fetchNewMoviesSuccess(results));
     } catch ({ message }) {
         yield put(feedActions.fetchNewMoviesFail(message));
     } finally {

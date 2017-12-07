@@ -10,7 +10,6 @@ export default{
     }),
     fetchNewMoviesFail: (error) => ({
         type:    types.FETCH_NEW_MOVIES_FAIL,
-        payload: error,
-        error:   true
+        payload: error
     })
 };

@@ -9,7 +9,7 @@ import { createLogger } from 'redux-logger';
 import reducer from 'reducers';
 import { saga } from 'sagas';
 
-const dev = process.env.NODE_ENV === 'development';
+const isDev = process.env.NODE_ENV === 'development';
 const devtools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
 const logger = createLogger({
@@ -31,11 +31,11 @@ const middleware = [routerMiddleware(history)]; // for working with routes
 
 const sagaMiddleware = createSagaMiddleware();
 
-const composeEnhancers = dev && devtools ? devtools : compose;
+const composeEnhancers = isDev && devtools ? devtools : compose;
 
 middleware.push(sagaMiddleware);
 
-if (dev) {
+if (isDev) {
     middleware.push(logger);
 }
 

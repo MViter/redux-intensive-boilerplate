@@ -4,9 +4,9 @@ import { Map, List } from 'immutable';
 // Instruments
 import types from 'actions/feed/types';
 
-const initialState = Map({
-    results: Map()
-});
+const initialState = {
+    results: List()
+};
 
 const defaultState = {
     results: [],
@@ -115,7 +115,9 @@ const defaultState = {
 const feedReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case types.FETCH_NEW_MOVIES_SUCCESS:
-            return state.push(payload.results);
+            return {
+                results: List(payload) // not payload.results - this was a great mistake :)
+            };
 
         default:
             return state;
