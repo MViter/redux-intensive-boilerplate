@@ -7,7 +7,6 @@ import { fetchNewMoviesWorker } from './workers/fetchNewMovies';
 
 export default {
     * fetchNewMoviesWatcher () {
-        yield console.log('In Saga - feed new movies');
         yield takeEvery(types.FETCH_NEW_MOVIES, fetchNewMoviesWorker);
     }
 };

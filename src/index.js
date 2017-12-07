@@ -6,8 +6,6 @@ import { Provider } from 'react-redux';
 // Instruments
 import store, { history } from './store';
 import './theme/reset.css';
-
-// Flux
 import Feed from './containers/Feed';
 
 render(
@@ -16,8 +14,3 @@ render(
     </Provider>,
     document.getElementById('root')
 );
-
-// render(
-//         <Feed />,
-//         document.getElementById('root')
-// );

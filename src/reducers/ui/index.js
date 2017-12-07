@@ -5,9 +5,9 @@ import { Map } from 'immutable';
 import types from 'actions/ui/types';
 
 const initialState = Map({
-    initialized:     false,
-    authFetching:    false,
-    feedFetching:    false
+    initialized:  false,
+    authFetching: false,
+    feedFetching: false
 });
 
 export default (state = initialState, { type }) => {

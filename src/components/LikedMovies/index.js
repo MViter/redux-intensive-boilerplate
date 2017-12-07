@@ -5,23 +5,13 @@ import React, { Component } from 'react';
 import Styles from './styles.scss';
 
 // Components
-
 export default class Movie extends Component {
-
-    static propTypes = {
-
-    };
 
     constructor () {
         super();
 
-        this.handleLikeMovie = ::this._handleLikeMovie;
+        this.handleLikingMovie = ::this._handleLikingMovie;
     }
-
-    componentWillMount() {
-
-    }
-
     state = {
         vote_count: 0,
         id: '',
@@ -38,29 +28,6 @@ export default class Movie extends Component {
         overview: '',
         release_date: ''
     };
-
-    _handleLikeMovie(event) {
-
-        const movieTitle = event.target.title;
-
-        try {
-
-            if ( localStorage.getItem('LikedMovies') !== null) {
-                    const prevStorage = localStorage.getItem('LikedMovies')+ ',';
-
-                    if(prevStorage.indexOf(movieTitle) === -1) {
-                        localStorage.setItem('LikedMovies', prevStorage.concat(movieTitle));
-                        event.target.className = 'Styles.likedMovie';
-                    }
-
-            } else {
-                localStorage.setItem('LikedMovies', movieTitle);
-            }
-        } catch (e) {
-           alert('Error: ', e.text);
-            return 0;
-        }
-    }
 
     render () {
 
@@ -84,9 +51,6 @@ export default class Movie extends Component {
 
         const adaptedPoaterPath = 'https://image.tmdb.org/t/p/w500' + poster_path;
         const adaptedBackgroundPath = 'https://image.tmdb.org/t/p/w780' + backdrop_path;
-        const isLiked =  localStorage.getItem('LikedMovies').indexOf(localStorage.getItem(event.target.title)) === -1
-            ? Styles.likeMovie
-            : Styles.likedMovie;
 
         return (
 
@@ -113,9 +77,9 @@ export default class Movie extends Component {
                         <a className = { Styles.viewMove} href = '#' title = 'View more info' alt = { title } > More Info </a>
                         <a
                             alt = 'I like it'
-                            className = { isLiked }
+                            className = { Styles.likeMovie}
                             href = '#'
-                            onClick = {this.handleLikeMovie }
+                            onClick = {this.handleLikingMovie }
                             title = { title }>
                         </a>
                     </p>

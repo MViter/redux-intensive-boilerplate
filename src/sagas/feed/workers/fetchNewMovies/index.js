@@ -9,11 +9,8 @@ import { api, apiKey } from 'instruments/api';
 
 export function* fetchNewMoviesWorker () {
     try {
-        console.log('In fetchNewMoviesWorker');
+        console.log('@@@In fetchNewMoviesWorker');
         yield put(uiActions.startFetchingFeed());
-
-        // yield put(uiActions.startfetchingFeed());//const token = yield select((state) => state.profile.get('token'));
-        // correct request: https://api.themoviedb.org/3/movie/now_playing?api_key=91c1a5a46a2617a97b91f80720f8f7bf&page=1
 
         const response = yield call(fetch, `${api}/3/movie/now_playing?api_key=${ apiKey }&page=1`, {
             method:  'GET',

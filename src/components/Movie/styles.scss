@@ -138,21 +138,40 @@ p {
 
     }
 
-    .viewMore {
-      width: 90%;
-      font-size: 0.9em;
-      font-weight: 400;
-      border-top: 1px solid #e3e3e3;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 16px;
+    .infoFooter {
+      border-top: 2px solid #e3e3e3;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      padding: 7px;
 
+      .viewMore {
+
+        box-sizing: border-box;
+        width: 50%;
+        font-size: 0.9em;
+        font-weight: 400;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .likeMovie {
+          &:before {
+            content: '♥';
+            font-size: 26px;
+          }
+        }
+
+      .likedMovie {
+        &:before {
+          content: '♡';
+          font-size: 26px;
+        }
+      }
+      }
     }
-
   }
-
-}
 
 
 

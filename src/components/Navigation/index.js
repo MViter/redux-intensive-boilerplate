@@ -11,9 +11,9 @@ import Styles from './styles.scss';
 
 export default class Navigation extends Component {
     static propTypes = {
-        authenticated: bool.isRequired,
-        logout:        func.isRequired,
-        profile:       object.isRequired,
+        //authenticated: bool.isRequired,
+        //logout:        func.isRequired,
+        //profile:       object.isRequired,
     };
 
     constructor () {
