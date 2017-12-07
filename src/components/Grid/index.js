@@ -28,6 +28,10 @@ export default class Grid extends Component {
         return '';
     }
 
+    componentWillMount () {
+        this.props.dispatch(actions.fetchNewMovies());
+    }
+
     render () {
 
         const { results, genres } = this.props;
