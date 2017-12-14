@@ -1,0 +1,42 @@
+@import '../../theme/palette';
+
+.movieMenu {
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  li {
+    max-width: 130px;
+    list-style: none;
+    padding: 0 20px;
+    margin: 20px;
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: $paletteColor3 $paletteColor4 $paletteColor5;
+    background: $gradient2;
+    background-color: $paletteColor5;
+    box-shadow: inset 0 1px 1px $paletteColor4;
+    font-size: 19px;
+    opacity: 0.8;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover {
+
+    }
+
+  }
+}

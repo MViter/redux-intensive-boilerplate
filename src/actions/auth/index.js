@@ -13,6 +13,7 @@ export default Object.freeze({
         type:    types.LOGIN_FAIL,
         payload: message
     }),
+        // *********************************** //
     signup: (user) => ({
         type:    types.SIGNUP,
         payload: user
@@ -24,6 +25,7 @@ export default Object.freeze({
         type:    types.SIGNUP_FAIL,
         payload: message
     }),
+        // *********************************** //
     logout: () => ({
         type: types.LOGOUT
     }),
@@ -33,5 +35,17 @@ export default Object.freeze({
     logoutFail: (message) => ({
         type:    types.LOGOUT_FAIL,
         payload: message
-    })
+    }),
+         // *********************************** //
+    loginGuest: (credentials) => ({
+        type:    types.LOGIN,
+        payload: credentials
+    }),
+    loginGuestSuccess: () => ({
+        type: types.LOGIN_GUEST_SUCCESS
+    }),
+    loginGuestFail: (message) => ({
+        type:    types.LOGIN_GUEST_FAIL,
+        payload: message
+    }),
 });

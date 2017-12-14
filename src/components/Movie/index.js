@@ -3,118 +3,129 @@ import React, { Component } from 'react';
 
 // Instruments
 import Styles from './styles.scss';
+import { func, bool, string, number } from 'prop-types';
 
 // Components
 
 export default class Movie extends Component {
 
     static propTypes = {
+        genres:      string.isRequired,
+        getFullInfo: func.isRequired,
+        id:          number.isRequired,
+        index:       string.isRequired,
+        overview:    string.isRequired,
+        posterPath:  string.isRequired,
+        releaseDate: string.isRequired,
+        title:       string.isRequired,
+        voteAverage: number.isRequired,
+        wishList:    bool.isRequired
+    };
 
+    static defaultProps = {
+        id:          '',
+        overview:    '',
+        posterPath:  '',
+        releaseDate: '',
+        title:       '',
+        voteAverage: 0
     };
 
     constructor () {
         super();
 
         this.handleLikeMovie = ::this._handleLikeMovie;
+        this._likeDesign = ::this._likeDesign;
+        localStorage.setItem('LikedMovies', 'Thor: Ragnarok');
     }
-
-
-    state = {
-        vote_count: 0,
-        id: '',
-        video: false,
-        vote_average: 0,
-        title: '',
-        popularity: 0,
-        poster_path: '',
-        original_language: '',
-        original_title:  '',
-        genre_ids:  '',
-        backdrop_path: '',
-        adult: false,
-        overview: '',
-        release_date: ''
-    };
 
     _handleLikeMovie(event) {
 
         const movieTitle = event.target.title;
+        const likedMovieStorage = localStorage.getItem('LikedMovies');
 
         try {
 
-            if ( localStorage.getItem('LikedMovies') !== null) {
-                    const prevStorage = localStorage.getItem('LikedMovies')+ ',';
+            if (likedMovieStorage) {
 
-                    if(prevStorage.indexOf(movieTitle) === -1) {
-                        localStorage.setItem('LikedMovies', prevStorage.concat(movieTitle));
-                        event.target.className = 'Styles.likedMovie';
-                    }
+                if (likedMovieStorage.indexOf(movieTitle) === -1) {
+                    localStorage.setItem('LikedMovies', likedMovieStorage.concat(movieTitle));
+
+                } else {
+                    const unlikedPosStart = likedMovieStorage.indexOf(movieTitle);
+                    const unlikedPosEnd = likedMovieStorage.indexOf(',', unlikedPosStart);
+                    const storageWithoutUnlikedMovie = likedMovieStorage.slice(0, unlikedPosStart).concat(likedMovieStorage.slice(unlikedPosEnd, likedMovieStorage.length-1));
+
+                    localStorage.removeItem('LikedMovies');
+                    localStorage.setItem('LikedMovies', storageWithoutUnlikedMovie);
+                }
 
             } else {
                 localStorage.setItem('LikedMovies', movieTitle);
             }
+
+            this._likeDesign(movieTitle);
+            this.forceUpdate();
         } catch (e) {
-           alert('Error: ', e.text);
+            console.log('Error: ', e.text);
             return 0;
         }
     }
 
+    _likeDesign (movie) {
+
+        const isMovieInStorage = (localStorage.getItem('LikedMovies')).indexOf(movie) !== -1;
+        return isMovieInStorage
+            ? <a alt = 'Add to wishlist' className = { Styles.chosenHeart } title = { movie } onClick = { this.handleLikeMovie } />
+            : <a alt = 'Add to wishlist' className = { Styles.heart } title = { movie } onClick = { this.handleLikeMovie } />;
+    }
+
     render () {
 
+        const movieTitle = this.props.title;
+        const like = this._likeDesign(movieTitle);
+
         const {
-            adult,
-            backdrop_path,
             id,
             index,
             genres,
-            original_language,
-            original_title,
             overview,
-            popularity,
-            poster_path,
-            release_date,
+            posterPath,
+            releaseDate,
             title,
-            vote_count,
-            video,
-            vote_average
+            voteAverage
         } = this.props;
 
-        const adaptedPoaterPath = 'https://image.tmdb.org/t/p/w500' + poster_path;
-        const adaptedBackgroundPath = 'https://image.tmdb.org/t/p/w780' + backdrop_path;
-        const isLiked =  localStorage.getItem('LikedMovies').indexOf(localStorage.getItem(event.target.title)) === -1
-            ? Styles.likeMovie
-            : Styles.likedMovie;
+        const adaptedPosterPath = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+        // const isLiked =  localStorage.getItem('LikedMovies').indexOf(localStorage.getItem(event.target.title)) === -1
+        //     ? Styles.likeMovie
+        //     : Styles.likedMovie;
+        const linkToMovie = `https://www.themoviedb.org/movie/${id}`;
 
         return (
 
-            <section className = { Styles.movie }>
+            <section className = { Styles.movie } key = { index } >
                 <div className = { Styles.poster } >
-                    <a href="#">
-                        <img src = { adaptedPoaterPath } alt = { title } />
+                    <a href = { linkToMovie }>
+                        <img alt = { title } src = { adaptedPosterPath } />
                     </a>
                 </div>
 
                 <div className = { Styles.info } >
                     <p className = { Styles.infoHeader } >
-                        <a className = { Styles.infoHeader_title} href="#">{ title }</a>
-                        <span className = { Styles.infoHeader_vote }>{ vote_average }</span>
+                        <a className = { Styles.infoHeader_title } href = '#'>{ title }</a>
+                        <span className = { Styles.infoHeader_vote }>{ voteAverage }</span>
                     </p>
-                    <p className = { Styles.meta_flex} >
-                        <span className = { Styles.releaseDate } >{ release_date }</span>
+                    <p className = { Styles.meta_flex } >
+                        <span className = { Styles.releaseDate } >{ releaseDate }</span>
                         <span className = { Styles.genres } >{ genres } </span>
                     </p>
                     <p className = { Styles.overview } >
                         { overview }
                     </p>
                     <p className = { Styles.infoFooter }>
-                        <a className = { Styles.viewMove} href = '#' title = 'View more info' alt = { title } > More Info </a>
-                        <a
-                            alt = 'I like it'
-                            className = { isLiked }
-                            href = '#'
-                            onClick = {this.handleLikeMovie }
-                            title = { title }>
-                        </a>
+                        <a alt = { title } className = { Styles.viewMove } href = '#' title = 'View more info'>More Info</a>
+                        { like }
                     </p>
 
                 </div>

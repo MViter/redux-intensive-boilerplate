@@ -3,27 +3,37 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Instruments
-import { array, object } from 'prop-types';
+import { array, func } from 'prop-types';
 import Styles from './styles.scss';
-
+import actions from 'actions/feed';
 
 // Components
 import Movie from '../Movie';
-import Navigation from '../Navigation';
-import actions from 'actions/feed';
+import Menu from '../Menu';
 
 class Grid extends Component {
 
-    static propTypes =  {
-        genres:  array.isRequired,
-        results: object.isRequired
+    static propTypes = {
+        dispatch: func.isRequired,
+        genres:   array.isRequired,
+        results:  array.isRequired
     };
 
     static defaultProps = {
-        results: []
+        results: [],
+        genres:  []
     };
 
-    mapGenreToGenreName(id, genres = []) {
+    constructor () {
+        super();
+
+        this.fetchTopRatedMovies = ::this._fetchTopRatedMovies;
+        this.fetchNewMovies = ::this._fetchNewMovies;
+        this.fetchPopularMovies = ::this._fetchPopularMovies;
+        this.fetchUpcomingMovies = ::this._fetchUpcomingMovies;
+    }
+
+    mapGenreIdToGenreName(id, genres = []) {
 
         const genre = genres.find(item => item.id === id);
 
@@ -35,7 +45,25 @@ class Grid extends Component {
     }
 
     componentDidMount () {
+        //this.props.actions.fetchNewMovies();
+        this.props.dispatch(actions.fetchGenres());
+        this.props.dispatch(actions.fetchTopRatedMovies());
+    }
+
+    _fetchTopRatedMovies () {
+        this.props.dispatch(actions.fetchTopRatedMovies());
+    }
+
+    _fetchNewMovies () {
         this.props.dispatch(actions.fetchNewMovies());
+    }
+
+    _fetchPopularMovies () {
+        this.props.dispatch(actions.fetchPopularMovies());
+    }
+
+    _fetchUpcomingMovies () {
+        this.props.dispatch(actions.fetchUpcomingMovies());
     }
 
     render () {
@@ -43,57 +71,49 @@ class Grid extends Component {
         const { results, genres } = this.props;
 
         const movieArray = results.map(({
-            vote_count,
             id,
-            video,
-            vote_average,
+            vote_average:voteAverage,
             title,
-            popularity,
-            poster_path,
-            original_language,
-            original_title,
-            genre_ids,
-            backdrop_path,
-            adult,
+            poster_path:posterPath,
+            genre_ids:genreIds,
             overview,
-            release_date }, index) => {
+            release_date:releaseDate }, index) => {
             return (
                 <Movie
-                    adult = { adult }
-                    backdrop_path = { backdrop_path }
-                    id = { id }
-                    index = { index }
                     genres = {
-                        genre_ids.reduce((accum, genreId) => {
-                                if (accum) {
-                                    return `${accum}, ${this.mapGenreToGenreName(genreId, genres)}`;
+                        genreIds.reduce((accum, genreId) => {
+                            if (accum) {
+                                return `${accum}, ${this.mapGenreIdToGenreName(genreId, genres)}`;
                             }
 
-                            return this.mapGenreToGenreName(genreId, genres);
+                            return this.mapGenreIdToGenreName(genreId, genres);
                         }
                             , '')
                     }
-                    genre_ids = { genre_ids }
-                    original_language = { original_language }
-                    original_title = { original_title }
+                    genreIds = { genreIds }
+                    id = { id }
+                    key = { index }
                     overview = { overview }
-                    popularity = { popularity }
-                    poster_path = { poster_path }
-                    release_date = { release_date }
+                    posterPath = { posterPath }
+                    releaseDate = { releaseDate }
                     title = { title }
-                    video = { video }
-                    vote_average = { vote_average }
-                    vote_count = { vote_count }
+                    voteAverage = { voteAverage }
                 />
             );
         });
 
         return (
             <section className = { Styles.grid } >
-                <div className = { Styles.navigation } >
-                    <Navigation />
+                <div className = { Styles.movieMenu }>
+                    <Menu
+                        fetchNewMovies = { this.fetchNewMovies }
+                        fetchPopularMovies = { this.fetchPopularMovies }
+                        fetchTopRatedMovies = { this.fetchTopRatedMovies }
+                        fetchUpcomingMovies = { this.fetchUpcomingMovies }
+                    />
                 </div>
-                <div className = {  Styles.contentWrap }>
+                <span className = { Styles.typeOfDisplayedMovies }></span>
+                <div className = { Styles.contentWrap }>
                     { movieArray }
                 </div>
             </section>

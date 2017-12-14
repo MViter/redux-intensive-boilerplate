@@ -12,6 +12,7 @@ export default (state = initialState, { type }) => {
     switch (type) {
         case types.LOGIN_SUCCESS:
         case types.SIGNUP_SUCCESS:
+        case types.LOGIN_GUEST_SUCCESS:
             return state.set('authenticated', true);
 
         case types.LOGOUT_SUCCESS:

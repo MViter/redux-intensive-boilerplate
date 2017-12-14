@@ -9,31 +9,38 @@ import feedActions from 'actions/feed';
 
 // Components
 import Grid from 'components/Grid';
+import Spinner from 'components/Spinner';
+import Navigation from 'components/Navigation';
 
 class Feed extends Component {
 
     static propTypes = {
-        //actions:      object.isRequired
-       // feedFetching: bool.isRequired,
-        genres:  array.isRequired,
-        results: object.isRequired
-        //profile:      object.isRequired
+        feedFetching: bool.isRequired,
+        genres:       array.isRequired,
+        results:      array.isRequired
+    };
+
+    static defaultProps = {
+        genres:  [],
+        results: []
     };
 
     render () {
 
-        const { results, genres } = this.props;
+        const { results, genres, feedFetching } = this.props;
 
-        return (
-            <Grid genres = { genres } key = '1' results = { results } />
-        );
-
+        return [
+            <Grid genres = { genres } key = '0' results = { results } />,
+            <Navigation key = '1' />,
+            <Spinner key = '2' spin = { feedFetching } />
+        ];
     }
 }
 
 const mapStateToProps = (state) => ({
-    results:  state.feed.results,
-    genres: state.feed.genres
+    feedFetching: state.ui.get('feedFetching'),
+    results:      state.feed.results,
+    genres:       state.feed.genres
 });
 
 const mapDispatchToProps = (dispatch) => ({

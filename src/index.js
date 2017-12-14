@@ -2,15 +2,21 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux';
 
 // Instruments
 import store, { history } from './store';
-import './theme/reset.css';
-import Feed from './containers/Feed';
+
+// Components
+import Routes from './routes';
 
 render(
     <Provider store = { store }>
-        <Feed />
+        <ConnectedRouter history = { history }>
+            <Routes />
+        </ConnectedRouter>
     </Provider>,
     document.getElementById('root')
 );
+
+

@@ -4,15 +4,28 @@
   display: flex;
   justify-content: center;
   background-color: $paletteColor3;
-  flex-direction: row;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
   height: 100%;
+  width: 100%;
+
+  .movieMenu {
+    width: 80%;
+    background-color: $paletteColor2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 20px;
+  }
 
   .contentWrap {
-    width: 1180px;
-    background-color: yellow;
+    width: 80%;
+    background-color: $paletteColor2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 120px;
+    padding-top: 10px;
   }
 }

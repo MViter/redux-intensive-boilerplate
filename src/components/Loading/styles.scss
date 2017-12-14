@@ -1,0 +1,42 @@
+@import '../../theme/palette';
+
+.loading {
+  display: flex;
+  justify-content: center;
+  background-color: $paletteColor3;
+  height: 100%;
+
+  .loadingContent {
+    width: 1180px;
+    //background-color: $paletteColor3;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+
+    .text {
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+      margin: 50px;
+
+      p {
+        font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+        font-size:36px;
+        color: $paletteColor4;
+        font-weight: 600;
+        text-shadow: 2px 2px 2px rgba(255,255,255,0.3);
+      }
+    }
+
+    .picture {
+      align-self: center;
+      width: 530px;
+      height: 300px;
+      background: url('../../theme/assets/fruit.jpg') center no-repeat;
+      box-shadow: rgba(255,255,240,.2) 0 0 200px 100px, rgba(255,255,240,.3) 0 0 40px, rgba(0,0,0,.8) 0 0 20px;
+
+    }
+  }
+}
