@@ -16,7 +16,7 @@ export function* fetchGenresWorker () {
             method:  'GET',
             headers: {
                 'Content-Type': 'text/html;charset=utf-8'
-            },
+            }
         });
 
         const { genres } = yield call([response, response.json]);

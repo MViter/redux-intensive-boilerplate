@@ -2,18 +2,6 @@ import types from './types';
 
 export default{
 
-    fetchDetailedMovie: () => ({
-        type: types.FETCH_DETAILED_MOVIE
-    }),
-    fetchDetailedMovieSuccess: (movie) => ({
-        type:    types.FETCH_DETAILED_MOVIE_SUCCESS,
-        payload: movie
-    }),
-    fetchDetailedMovieFail: (error) => ({
-        type:    types.FETCH_DETAILED_MOVIE_FAIL,
-        payload: error
-    }),
-    // **************************************************** //
     fetchNewMovies: () => ({
         type: types.FETCH_NEW_MOVIES
     }),

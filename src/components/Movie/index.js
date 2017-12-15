@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 // Instruments
 import Styles from './styles.scss';
 import { func, bool, string, number } from 'prop-types';
+import pages from 'routes/pages';
+import { NavLink } from 'react-router-dom';
 
 // Components
 
@@ -11,19 +13,21 @@ export default class Movie extends Component {
 
     static propTypes = {
         genres:      string.isRequired,
-        getFullInfo: func.isRequired,
+        getDetails:  func.isRequired,
         id:          number.isRequired,
         index:       string.isRequired,
         overview:    string.isRequired,
         posterPath:  string.isRequired,
         releaseDate: string.isRequired,
         title:       string.isRequired,
-        voteAverage: number.isRequired,
-        wishList:    bool.isRequired
+        voteAverage: number.isRequired
     };
 
     static defaultProps = {
+        genres:      '',
+        getDetails:  new Function(),
         id:          '',
+        index:       '',
         overview:    '',
         posterPath:  '',
         releaseDate: '',
@@ -35,11 +39,12 @@ export default class Movie extends Component {
         super();
 
         this.handleLikeMovie = ::this._handleLikeMovie;
-        this._likeDesign = ::this._likeDesign;
+        this.getDetails = ::this._getDetails;
+        this.likeDesign = ::this._likeDesign;
         localStorage.setItem('LikedMovies', 'Thor: Ragnarok');
     }
 
-    _handleLikeMovie(event) {
+    _handleLikeMovie (event) {
 
         const movieTitle = event.target.title;
         const likedMovieStorage = localStorage.getItem('LikedMovies');
@@ -79,6 +84,9 @@ export default class Movie extends Component {
             ? <a alt = 'Add to wishlist' className = { Styles.chosenHeart } title = { movie } onClick = { this.handleLikeMovie } />
             : <a alt = 'Add to wishlist' className = { Styles.heart } title = { movie } onClick = { this.handleLikeMovie } />;
     }
+    _getDetails () {
+        this.props.getDetails(this.props.id);
+    }
 
     render () {
 
@@ -104,27 +112,34 @@ export default class Movie extends Component {
 
         return (
 
-            <section className = { Styles.movie } key = { index } >
+            <section className = { Styles.movie } key = { index }>
                 <div className = { Styles.poster } >
                     <a href = { linkToMovie }>
                         <img alt = { title } src = { adaptedPosterPath } />
                     </a>
                 </div>
 
-                <div className = { Styles.info } >
-                    <p className = { Styles.infoHeader } >
+                <div className = { Styles.info }>
+                    <p className = { Styles.infoHeader }>
                         <a className = { Styles.infoHeader_title } href = '#'>{ title }</a>
                         <span className = { Styles.infoHeader_vote }>{ voteAverage }</span>
                     </p>
-                    <p className = { Styles.meta_flex } >
-                        <span className = { Styles.releaseDate } >{ releaseDate }</span>
+                    <p className = { Styles.meta_flex }>
+                        <span className = { Styles.releaseDate }>{ releaseDate }</span>
                         <span className = { Styles.genres } >{ genres } </span>
                     </p>
-                    <p className = { Styles.overview } >
+                    <p className = { Styles.overview }>
                         { overview }
                     </p>
                     <p className = { Styles.infoFooter }>
-                        <a alt = { title } className = { Styles.viewMove } href = '#' title = 'View more info'>More Info</a>
+                        <NavLink
+                            activeClassName = { Styles.active }
+                            className = { Styles.viewMove }
+                            title = 'Details'
+                            to = { `${pages.detailedmovie}/${id}` }>
+                            /*onClick = { this.getDetails }>*/
+                            Details
+                        </NavLink>
                         { like }
                     </p>
 

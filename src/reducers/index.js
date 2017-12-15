@@ -5,13 +5,11 @@ import { routerReducer } from 'react-router-redux';
 // Instruments
 import feed from './feed';
 import ui from './ui';
-import auth from './auth';
-import forms from './forms';
+import feedDetailedMovie from './feedDetailedMovie';
 
 export default combineReducers({
     routerReducer,
-    forms,
     ui,
-    auth,
-    feed
+    feed,
+    feedDetailedMovie
 });

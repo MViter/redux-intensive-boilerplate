@@ -1,94 +1,83 @@
 // Core
 import React, { Component } from 'react';
-import { bool, object, func } from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { func } from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 // Instruments
 import Styles from './styles.scss';
-import authActions from 'actions/auth';
 import pages from 'routes/pages';
-import logo from '../../theme/assets/logosmall.png'
-import menubtn from '../../theme/assets/menubtn.png';
+import logo from '../../theme/assets/logosmall.png';
 
 // Components
-import Menu from 'components/Menu';
+//import Menu from 'components/Menu';
 
-class Navigation extends Component {
+export default class Navigation extends Component {
+
     static propTypes = {
-        authenticated: bool.isRequired,
-        logout:        func.isRequired
-        //profile:       object.isRequired,
+        fetchNewMovies:      func.isRequired,
+        fetchPopularMovies:  func.isRequired,
+        fetchTopRatedMovies: func.isRequired,
+        fetchUpcomingMovies: func.isRequired
     };
 
     constructor () {
         super();
 
         this.getNavigation = ::this._getNavigation;
-        this.handleMenu = ::this._handleMenu;
-        this.getDropDown = ::this._getDropDown;
-    }
-
-    _handleMenu() {
-        console.log('In Navigation / _handleMenu');
-
-        return (<Menu />, document.getElementById('dropDownMenu'));
-    }
-
-    _getDropDown () {
-        const isKeyPressed = false;
-
-        return isKeyPressed
-            ? [
-                <Menu key = '0' />
-            ]
-            : [
-                <a className = { Styles.menuBtn } key = '3' onClick = { this.handleMenu }>
-                    <img src = { menubtn } />
-                    { Styles.dropDownMenu }
-                </a>
-
-            ];
     }
     _getNavigation () {
-        const { authenticated } = this.props;
 
+        const { fetchNewMovies, fetchPopularMovies, fetchTopRatedMovies, fetchUpcomingMovies } = this.props;
 
-        return authenticated
-            ? [
-                <h1 key = '0'>User authentacated</h1>
-            ]
-            : [
-                <NavLink
-                    activeClassName = { Styles.active }
-                    className = { Styles.authMenuBtn }
-                    key = '0'
-                    to = { pages.login}>Log In
-                </NavLink>,
-                <NavLink
-                    activeClassName = { Styles.active }
-                    className = { Styles.authMenuBtn }
-                    key = '1'
-                    to = { pages['sign-up'] }>Sign Up
-                </NavLink>,
-                <NavLink
-                    activeClassName = { Styles.active }
-                    className = { Styles.authMenuBtn }
-                    key = '2'
-                    to = { pages.guest }>Guest
-                </NavLink>
-            ];
-    }
+        return [
+            <NavLink
+                activeClassName = { Styles.active }
+                className = { Styles.movieTypeMenuBtn }
+                key = '0'
+                to = { pages.popular }
+                onClick = { fetchPopularMovies }>
+                Popular
+            </NavLink>,
+            <NavLink
+                activeClassName = { Styles.active }
+                className = { Styles.movieTypeMenuBtn }
+                key = '1'
+                to = { pages['top-rated'] }
+                onClick = { fetchTopRatedMovies }>
+                Top-Rated
+            </NavLink>,
+            <NavLink
+                activeClassName = { Styles.active }
+                className = { Styles.movieTypeMenuBtn }
+                key = '2'
+                to = { pages.upcoming }
+                onClick = { fetchUpcomingMovies } >
+                Upcoming
+            </NavLink>,
 
-    _logout () {
-        this.props.logout();
+            <NavLink
+                activeClassName = { Styles.active }
+                className = { Styles.movieTypeMenuBtn }
+                key = '3'
+                to = { pages.new }
+                onClick = { fetchNewMovies }>
+                New
+            </NavLink>,
+            <NavLink
+                activeClassName = { Styles.active }
+                className = { Styles.movieTypeMenuBtn }
+                key = '4'
+                to = { pages.watchlist } >
+                See Watchlist
+            </NavLink>
+        ];
+
     }
 
     render () {
 
         const navigation = this.getNavigation();
-        const dropDownMenu = this.getDropDown();
+        //const dropDownMenu = this.getDropDown();
 
         return (<section className = { Styles.navigation }>
             <div className = { Styles.logo }>
@@ -96,20 +85,9 @@ class Navigation extends Component {
                     <img src = { logo } />
                 </a>
             </div>
-            <div className = { Styles.authMenu }>
+            <div className = { Styles.movieTypeMenu }>
                 { navigation }
-                { dropDownMenu }
             </div>
         </section>);
     }
 }
-
-const mapSTateToProps = (state) => ({
-    authenticated: state.auth.get('authenticated')
-});
-
-const mapDispatchToProps = (dispatch) => ({
-    logout: bindActionCreators(authActions.logout, dispatch)
-});
-
-export default connect(mapSTateToProps, mapDispatchToProps)(Navigation);

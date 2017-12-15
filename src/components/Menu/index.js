@@ -13,13 +13,8 @@ export default class Menu extends Component {
         fetchTopRatedMovies: func.isRequired,
         fetchUpcomingMovies: func.isRequired
     };
-    constructor () {
-        super();
-        this.updateStyleEventTarget = ::this._updateStyleEventTarget;
-    }
-    _updateStyleEventTarget (event) {
 
-    }
+
 
     render () {
 

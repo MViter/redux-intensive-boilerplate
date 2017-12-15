@@ -2,69 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad78c952-a5c7-47ac-889c-b945c7376a0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/fruit.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/loadingposter.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/logosmall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/menubtn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/transparentHeart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/profile/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Forms/Login.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Forms/Signup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Forms/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Home/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Home/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Input/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/LikedMoviesGrid/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Loading/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Loading/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Menu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Menu/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Search/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Search/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Spinner/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Spinner/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Feed/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Guest/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Guest/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Login/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Login/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Signup/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/Signup/styles.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/forms/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/profile/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/Private/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/pages/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/auth/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/auth/workers/login/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/auth/workers/logout/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/auth/workers/signup/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/LikedMovies/index.js" afterPath="$PROJECT_DIR$/src/components/LikedMoviesGrid/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/theme/assets/cross.png" afterPath="$PROJECT_DIR$/src/theme/assets/cross.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/theme/assets/background.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Catcher/styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/DetailedMovie/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/DetailedMovie/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/instruments/helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/feedDetailedMovie/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/routes/General/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/feedDetailedMovie/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/detailedMovie/index.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/auth/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/auth/types.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/profile/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/actions/profile/types.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Forms/Login.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Forms/Signup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Forms/styles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/LikedMoviesGrid/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reducers/auth/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reducers/forms/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/reducers/profile/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/routes/Private/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/routes/Public/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sagas/auth/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sagas/auth/workers/login/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sagas/auth/workers/loginGuest/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sagas/auth/workers/logout/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sagas/auth/workers/signup/index.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/LikedMoviesGrid/styles.scss" afterPath="$PROJECT_DIR$/src/components/Catcher/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Search/index.js" afterPath="$PROJECT_DIR$/src/actions/feedDetailedMovie/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/Search/styles.scss" afterPath="$PROJECT_DIR$/src/actions/feedDetailedMovie/types.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sagas/feed/workers/fetchDetailedMovie/index.js" afterPath="$PROJECT_DIR$/src/sagas/feedDetailedMovie/workers/fetchDetailedMovie/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sagas/feed/workers/fetchWishlist/index.js" afterPath="$PROJECT_DIR$/src/sagas/feed/workers/fetchWatchlist/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/auth/index.js" afterPath="$PROJECT_DIR$/src/actions/auth/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/auth/types.js" afterPath="$PROJECT_DIR$/src/actions/auth/types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/feed/index.js" afterPath="$PROJECT_DIR$/src/actions/feed/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/feed/types.js" afterPath="$PROJECT_DIR$/src/actions/feed/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/ui/types.js" afterPath="$PROJECT_DIR$/src/actions/ui/types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/index.js" afterPath="$PROJECT_DIR$/src/components/Grid/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/styles.scss" afterPath="$PROJECT_DIR$/src/components/Grid/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Menu/index.js" afterPath="$PROJECT_DIR$/src/components/Menu/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Movie/index.js" afterPath="$PROJECT_DIR$/src/components/Movie/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Movie/styles.scss" afterPath="$PROJECT_DIR$/src/components/Movie/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Navigation/styles.scss" afterPath="$PROJECT_DIR$/src/components/Navigation/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Feed/index.js" afterPath="$PROJECT_DIR$/src/containers/Feed/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/auth/index.js" afterPath="$PROJECT_DIR$/src/reducers/auth/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/feed/index.js" afterPath="$PROJECT_DIR$/src/reducers/feed/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/index.js" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/ui/index.js" afterPath="$PROJECT_DIR$/src/reducers/ui/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/index.js" afterPath="$PROJECT_DIR$/src/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/pages/index.js" afterPath="$PROJECT_DIR$/src/routes/pages/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sagas/feed/index.js" afterPath="$PROJECT_DIR$/src/sagas/feed/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies/index.js" afterPath="$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sagas/feed/workers/fetchGenres/index.js" afterPath="$PROJECT_DIR$/src/sagas/feed/workers/fetchGenres/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sagas/index.js" afterPath="$PROJECT_DIR$/src/sagas/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/theme/palette.scss" afterPath="$PROJECT_DIR$/src/theme/palette.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,44 +65,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/Feed/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/Guest/index.js">
+        <entry file="file://$PROJECT_DIR$/src/routes/pages/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="144">
+              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Menu/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="e#66#101#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -123,64 +78,124 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Grid/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="71" column="82" lean-forward="true" selection-start-line="71" selection-start-column="82" selection-end-line="71" selection-end-column="82" />
               <folding>
                 <element signature="e#105#146#0" expanded="true" />
-                <element signature="e#234#263#0" expanded="true" />
+                <element signature="e#363#392#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/Public/index.js">
+        <entry file="file://$PROJECT_DIR$/src/sagas/feedDetailedMovie/workers/fetchDetailedMovie/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/Private/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchWishlist/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding>
-                <element signature="e#71#106#0" expanded="true" />
+                <element signature="e#119#184#0" expanded="true" />
+                <marker date="1513342106286" expanded="true" signature="15:26" ph="..." />
+                <marker date="1513342106286" expanded="true" signature="1131:1144" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instruments/api.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/General/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="55" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="38" />
+              <folding>
+                <element signature="e#7#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/reducers/feedDetailedMovie/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <marker date="1513367886257" expanded="true" signature="136:142" ph="{...}" />
+                <marker date="1513367886257" expanded="true" signature="626:676" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Movie/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="138" column="57" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="57" />
+              <folding>
+                <marker date="1513370219940" expanded="true" signature="3650:5129" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="3702:3874" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="3750:3851" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="3925:5106" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="3983:4192" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="4249:4442" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="4498:4560" ph="..." />
+                <marker date="1513370219940" expanded="true" signature="4618:5082" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Menu/styles.scss">
+        <entry file="file://$PROJECT_DIR$/src/containers/DetailedMovie/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="360">
+              <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding>
+                <element signature="e#328#360#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/DetailedMovie/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+              <folding>
+                <element signature="e#8#49#0" expanded="true" />
+                <element signature="e#149#184#0" expanded="true" />
+                <element signature="e#394#429#0" expanded="true" />
+                <element signature="e#510#551#0" expanded="true" />
+                <marker date="1513369742152" expanded="true" signature="2513:4859" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="2578:2680" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="2735:4835" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="2792:2968" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="2832:2941" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3022:4807" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3085:3285" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3344:3414" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3475:3688" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3748:3819" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3887:4207" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="3951:4029" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="4095:4176" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="4269:4298" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="4436:4780" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="4474:4749" ph="..." />
+                <marker date="1513369742152" expanded="true" signature="5058:5119" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,6 +205,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -199,6 +215,16 @@
       <find>reducer</find>
       <find>Menu2</find>
       <find>getInitialState</find>
+      <find>imm</find>
+      <find>merge</find>
+      <find>getFull</find>
+      <find>feedDetailedMovie</find>
+      <find>like</find>
+      <find>getDetails</find>
+      <find>fetchDetailedMovie</find>
+      <find>releaseDate</find>
+      <find>poster</find>
+      <find>genres</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -207,37 +233,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/reducers/feed/index.js" />
-        <option value="$PROJECT_DIR$/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/instruments/api.js" />
         <option value="$PROJECT_DIR$/src/actions/ui/tyoes.js" />
         <option value="$PROJECT_DIR$/src/actions/ui/index.js" />
         <option value="$PROJECT_DIR$/src/sagas/feed/workers/index.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/styles.scss" />
         <option value="$PROJECT_DIR$/src/containers/Menu/index.js" />
         <option value="$PROJECT_DIR$/src/components/Menu2/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/Menu2/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/components/Movie/styles.scss" />
-        <option value="$PROJECT_DIR$/src/routes/pages/index.js" />
-        <option value="$PROJECT_DIR$/src/sagas/index.js" />
         <option value="$PROJECT_DIR$/src/sagas/feed/workers/fetchWishList/index.js" />
-        <option value="$PROJECT_DIR$/src/actions/feed/index.js" />
-        <option value="$PROJECT_DIR$/src/actions/feed/types.js" />
         <option value="$PROJECT_DIR$/src/actions/ui/types.js" />
-        <option value="$PROJECT_DIR$/src/sagas/feed/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Movie/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Grid/styles.scss" />
         <option value="$PROJECT_DIR$/src/containers/Feed/styles.scss" />
-        <option value="$PROJECT_DIR$/src/containers/Feed/index.js" />
         <option value="$PROJECT_DIR$/src/components/Spinner/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Menu/index.js" />
         <option value="$PROJECT_DIR$/src/components/Menu/styles.scss" />
         <option value="$PROJECT_DIR$/src/sagas/feed/workers/fetchWishlist/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Grid/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Guest/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/feed/workers/fetchGenres/index.js" />
+        <option value="$PROJECT_DIR$/src/components/DetailedMovie/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/DetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/Public/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/feed/types.js" />
+        <option value="$PROJECT_DIR$/src/actions/feed/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/feedDetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/feed/workers/fetchDetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/feedDetailedMovie/workers/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/feed/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/feedDetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/selectors/index.js" />
+        <option value="$PROJECT_DIR$/src/selectors/detailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/feedDetailedMovie/types.js" />
+        <option value="$PROJECT_DIR$/src/reducers/ui/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Menu/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/styles.scss" />
+        <option value="$PROJECT_DIR$/src/containers/Feed/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Catcher/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Catcher/styles.css" />
+        <option value="$PROJECT_DIR$/src/components/Navigation/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/feedDetailedMovie/workers/fetchDetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Grid/styles.scss" />
+        <option value="$PROJECT_DIR$/src/instruments/helpers.js" />
+        <option value="$PROJECT_DIR$/src/components/Grid/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/feed/index.js" />
+        <option value="$PROJECT_DIR$/src/reducers/feedDetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/DetailedMovie/styles.scss" />
+        <option value="$PROJECT_DIR$/src/routes/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/pages/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/DetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/General/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Movie/index.js" />
       </list>
     </option>
   </component>
@@ -254,7 +300,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="376" />
-    <option name="y" value="43" />
+    <option name="y" value="57" />
     <option name="width" value="1544" />
     <option name="height" value="784" />
   </component>
@@ -273,8 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -304,27 +348,21 @@
               <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
               <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Movie" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
               <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Feed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
               <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Guest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="instruments" type="462c0819:PsiDirectoryNode" />
+              <item name="DetailedMovie" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
@@ -337,77 +375,19 @@
               <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Private" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchNewMovies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchWishlist" type="462c0819:PsiDirectoryNode" />
+              <item name="General" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ReduxJS_intensive/redux-intensive-boilerplate-master" />
     <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nvm/versions/node/v8.6.0/bin/node" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
@@ -415,17 +395,22 @@
     <property name="node.js.path.for.package.standard" value="$USER_HOME$/.nvm/versions/node/v8.6.0/bin/node" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/theme/assets" />
+      <recent name="$PROJECT_DIR$/src/components/DetailedMovie" />
       <recent name="$PROJECT_DIR$/src/components/Movie" />
       <recent name="$PROJECT_DIR$/src/components/Menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/Menu2" />
+      <recent name="$PROJECT_DIR$/src/selectors/detailedMovie" />
+      <recent name="$PROJECT_DIR$/src/sagas/feedDetailedMovie/workers/fetchDetailedMovie" />
+      <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies" />
+      <recent name="$PROJECT_DIR$/src/components/Menu2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -455,32 +440,36 @@
       <workItem from="1512639182947" duration="37000" />
       <workItem from="1513160235724" duration="15832000" />
       <workItem from="1513239568402" duration="4532000" />
-      <workItem from="1513250545255" duration="931000" />
+      <workItem from="1513250545255" duration="24849000" />
+      <workItem from="1513337708167" duration="11991000" />
+      <workItem from="1513366186411" duration="4133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31239000" />
+    <option name="totallyTimeSpent" value="71282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="43" width="1875" height="1092" extended-state="6" />
+    <frame x="749" y="74" width="1875" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3108108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16864865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09424084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35706806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -492,291 +481,16 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/ui/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/ui/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="126" column="24" lean-forward="false" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="e#72#111#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/ui/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/ui/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instruments/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/moment/src/lib/units/millisecond.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instruments/validators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Login/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Menu2/styles.scss" />
-    <entry file="file://$PROJECT_DIR$/src/components/Menu2/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Forms/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Movie/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="150" column="21" lean-forward="true" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/ui/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="87" column="2" lean-forward="true" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/feed/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/ui/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchTopRatedMovies/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/feed/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#72#111#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="68" column="18" lean-forward="false" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Forms/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="64" column="49" lean-forward="false" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Movie/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
-          <folding>
-            <element signature="e#66#101#0" expanded="false" />
-            <marker date="1513247106426" expanded="true" signature="3404:4608" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="3457:3629" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="3505:3606" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="3680:4585" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="3739:3949" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="4006:4201" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="4257:4320" ph="..." />
-            <marker date="1513247106426" expanded="true" signature="4378:4561" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Forms/styles.scss" />
     <entry file="file://$PROJECT_DIR$/src/theme/palette.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Grid/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -791,17 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Menu/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#66#101#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,17 +512,216 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="12" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchWatchlist/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchGenres/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchWishlist/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Forms/Login.js" />
+    <entry file="file://$PROJECT_DIR$/src/containers/Guest/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/forms/index.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/immutable/dist/immutable.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="1130" column="16" lean-forward="false" selection-start-line="1130" selection-start-column="16" selection-end-line="1130" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/eslint/lib/config/config-ops.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/feed/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/feed/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchDetailedMovie/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/sagas/feed/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sagas/feedDetailedMovie/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#71#106#0" expanded="true" />
+            <element signature="e#72#124#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selectors/detailedMovie/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/feedDetailedMovie/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/ui/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/feedDetailedMovie/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/ui/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#8#48#0" expanded="false" />
+            <element signature="e#117#143#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Feed/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#149#198#0" expanded="false" />
+            <element signature="e#254#289#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Menu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Catcher/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/Private/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/routes/Public/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/sagas/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding>
+            <element signature="e#66#92#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Movie/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="150" column="21" lean-forward="false" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navigation/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/ReduxJS_intensive/redux-intensive-boilerplate-master/src/components/Forms/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -831,54 +733,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Grid/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Catcher/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="192">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instruments/validators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instruments/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/feed/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/DetailedMovie/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
           <folding>
-            <element signature="e#105#146#0" expanded="true" />
-            <element signature="e#234#263#0" expanded="true" />
+            <element signature="e#328#360#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Public/index.js">
+    <entry file="file://$PROJECT_DIR$/src/sagas/feedDetailedMovie/workers/fetchDetailedMovie/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="18">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#119#184#0" expanded="true" />
+            <marker date="1513342106286" expanded="true" signature="15:26" ph="..." />
+            <marker date="1513342106286" expanded="true" signature="1131:1144" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Private/index.js">
+    <entry file="file://$PROJECT_DIR$/src/reducers/feedDetailedMovie/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <marker date="1513367886257" expanded="true" signature="136:142" ph="{...}" />
+            <marker date="1513367886257" expanded="true" signature="626:676" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Guest/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
+          <caret line="71" column="82" lean-forward="true" selection-start-line="71" selection-start-column="82" selection-end-line="71" selection-end-column="82" />
+          <folding>
+            <element signature="e#105#146#0" expanded="true" />
+            <element signature="e#363#392#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/feed/workers/fetchNewMovies/index.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/DetailedMovie/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="288">
+          <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+          <folding>
+            <element signature="e#8#49#0" expanded="true" />
+            <element signature="e#149#184#0" expanded="true" />
+            <element signature="e#394#429#0" expanded="true" />
+            <element signature="e#510#551#0" expanded="true" />
+            <marker date="1513369742152" expanded="true" signature="2513:4859" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="2578:2680" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="2735:4835" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="2792:2968" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="2832:2941" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3022:4807" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3085:3285" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3344:3414" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3475:3688" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3748:3819" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3887:4207" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="3951:4029" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="4095:4176" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="4269:4298" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="4436:4780" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="4474:4749" ph="..." />
+            <marker date="1513369742152" expanded="true" signature="5058:5119" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Feed/index.js">
+    <entry file="file://$USER_HOME$/ReduxJS_intensive/redux-intensive-boilerplate-master/src/components/Navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="-648">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#242#272#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Movie/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="138" column="57" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="57" />
+          <folding>
+            <marker date="1513370219940" expanded="true" signature="3650:5129" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="3702:3874" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="3750:3851" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="3925:5106" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="3983:4192" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="4249:4442" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="4498:4560" ph="..." />
+            <marker date="1513370219940" expanded="true" signature="4618:5082" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/General/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#7#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

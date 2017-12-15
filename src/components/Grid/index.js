@@ -6,10 +6,12 @@ import { connect } from 'react-redux';
 import { array, func } from 'prop-types';
 import Styles from './styles.scss';
 import actions from 'actions/feed';
+import feedDetailedMovieActions from 'actions/feedDetailedMovie';
+//import { mapGenreIdToGenreName } from 'instruments/helpers';
 
 // Components
 import Movie from '../Movie';
-import Menu from '../Menu';
+import Navigation from '../Navigation';
 
 class Grid extends Component {
 
@@ -31,23 +33,23 @@ class Grid extends Component {
         this.fetchNewMovies = ::this._fetchNewMovies;
         this.fetchPopularMovies = ::this._fetchPopularMovies;
         this.fetchUpcomingMovies = ::this._fetchUpcomingMovies;
+        this.fetchDetailedMovie = ::this._fetchDetailedMovie;
+    }
+    componentDidMount () {
+        //this.props.actions.fetchNewMovies();
+        this.props.dispatch(actions.fetchGenres());
+        this.props.dispatch(actions.fetchTopRatedMovies());
     }
 
-    mapGenreIdToGenreName(id, genres = []) {
+    mapGenreIdToGenreName (id, genres = []) {
 
-        const genre = genres.find(item => item.id === id);
+        const genre = genres.find((item) => item.id === id);
 
         if (genre) {
             return genre.name;
         }
 
         return '';
-    }
-
-    componentDidMount () {
-        //this.props.actions.fetchNewMovies();
-        this.props.dispatch(actions.fetchGenres());
-        this.props.dispatch(actions.fetchTopRatedMovies());
     }
 
     _fetchTopRatedMovies () {
@@ -64,6 +66,10 @@ class Grid extends Component {
 
     _fetchUpcomingMovies () {
         this.props.dispatch(actions.fetchUpcomingMovies());
+    }
+
+    _fetchDetailedMovie (movieId) {
+        this.props.dispatch(feedDetailedMovieActions.fetchDetailedMovie(movieId));
     }
 
     render () {
@@ -91,6 +97,7 @@ class Grid extends Component {
                             , '')
                     }
                     genreIds = { genreIds }
+                    getDetails = { this.fetchDetailedMovie }
                     id = { id }
                     key = { index }
                     overview = { overview }
@@ -105,7 +112,7 @@ class Grid extends Component {
         return (
             <section className = { Styles.grid } >
                 <div className = { Styles.movieMenu }>
-                    <Menu
+                    <Navigation
                         fetchNewMovies = { this.fetchNewMovies }
                         fetchPopularMovies = { this.fetchPopularMovies }
                         fetchTopRatedMovies = { this.fetchTopRatedMovies }

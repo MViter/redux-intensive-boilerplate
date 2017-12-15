@@ -16,12 +16,12 @@ class Feed extends Component {
 
     static propTypes = {
         feedFetching: bool.isRequired,
-        genres:       array.isRequired,
+        genres:       object.isRequired,
         results:      array.isRequired
     };
 
     static defaultProps = {
-        genres:  [],
+        genres:  {},
         results: []
     };
 
@@ -31,8 +31,7 @@ class Feed extends Component {
 
         return [
             <Grid genres = { genres } key = '0' results = { results } />,
-            <Navigation key = '1' />,
-            <Spinner key = '2' spin = { feedFetching } />
+            <Spinner key = '1' spin = { feedFetching } />
         ];
     }
 }

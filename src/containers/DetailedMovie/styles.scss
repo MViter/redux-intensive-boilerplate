@@ -1,0 +1,225 @@
+
+.movieItemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  top: 70px;
+  position: relative;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 70px 0 0;
+
+  .backgroudPoster {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    img {
+      width: 100%;
+      opacity: 0.7;
+    }
+  }
+
+  .movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    align-self: center;
+    box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    .poster {
+      overflow: visible;
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        line-height: 0;
+      }
+      img {
+        width: 100%;
+        transition: opacity 200ms;
+      }
+    }
+
+    .info {
+      min-width: 298px;
+      height: 278px;
+      position: relative;
+      box-sizing: border-box;
+      padding: 5px 8px 8px 8px;
+
+      .infoHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+          font-size: 32px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          padding-right: 20px;
+        }
+
+        .vote {
+          padding-top: 0;
+          margin-right: 0;
+          display: inline-flex;
+          align-items: center;
+          top: 0;
+          padding-left: 4px;
+          color: #000;
+          line-height: 0;
+          font-size: 1.1em;
+
+          &:after {
+            content: '★';
+            line-height: 30px;
+            padding-left: 6px;
+          }
+        }
+      }
+
+      .tagline {
+        position: relative;
+        box-sizing: border-box;
+        padding: 5px 8px 8px 8px;
+      }
+
+      .infoAdditional {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .runtime {
+          position: relative;
+          box-sizing: border-box;
+          padding: 5px 8px 8px 8px;
+          &:after {
+            content: ' min';
+          }
+        }
+
+        .popularity {
+          position: relative;
+          box-sizing: border-box;
+          padding: 5px 8px 8px 8px;
+
+          &:before {
+            content: 'popularity: ';
+          }
+        }
+      }
+
+      .meta_flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0;
+        font-size: 0.9em;
+
+        .releaseDate {
+          font-size: 1.0em;
+          padding-right: 10px;
+          display: inline-flex;
+          align-items: center;
+          color: #667;
+
+          &:before {
+            content: '📅';
+            font-size: 20px;
+            padding-right: 6px;
+          }
+        }
+
+        .genres {
+          padding-left: 1px;
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-style: italic;
+          color: #667;
+        }
+      }
+
+      .overview {
+        word-wrap: break-word;
+        color: #4d4d4d;
+        font-size: 16px;
+        line-height: 1.2em;
+        margin-top: 20px;
+        height: 6.2rem;
+        display: block;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .infoFooter {
+        border-top: 2px solid #e3e3e3;
+        display: flex;
+        justify-content: flex-end;
+        padding: 7px;
+
+        .heart:before {
+          content: 'Add to watchlist ';
+          color: red;
+          font-size: 32px;
+          cursor: pointer;
+        }
+
+        .heart:after {
+          content: '\2665';
+          color: red;
+          font-size: 32px;
+          cursor: pointer;
+        }
+        .chosenHeart:before {
+          content: 'Added to watchlist ';
+          color: #de2b24;
+          font-size: 26px;
+          cursor: pointer;
+        }
+
+        .chosenHeart:after {
+          content: '\2665';
+          color: #de2b24;
+          font-size: 32px;
+          cursor: pointer;
+        }
+
+      }
+    }
+
+    .returnSection {
+
+      position: relative;
+      box-sizing: border-box;
+
+
+      .returnBtn {
+        margin-top: 20px;
+        opacity: 0.7;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 1.2em;
+        white-space: normal;
+        overflow: hidden;
+
+        &:hover {
+          opacity: 1;
+      }
+      }
+    }
+  }
+}
+
+
+
+

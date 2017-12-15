@@ -7,84 +7,45 @@ import { Switch, withRouter } from 'react-router';
 
 // Instruments
 import pages from './pages';
-import authActions from 'actions/auth';
 import uiActions from 'actions/ui';
 
 //Components
-import Public from './Public';
-import Private from './Private';
+import General from './General';
 
 import Loading from '../components/Loading';
 
 class Routes extends Component {
     static propTypes = {
-        authenticated: bool.isRequired,
-        history:       object.isRequired,
-        initialize:    func.isRequired,
-        initialized:   bool.isRequired,
-        location:      object.isRequired,
-        login:         func.isRequired
+        history:     object.isRequired,
+        initialize:  func.isRequired,
+        initialized: bool.isRequired,
+        location:    object.isRequired
     };
 
     componentDidMount () {
-        const {
-            authenticated,
-            history,
-            initialize,
-            location
-        } = this.props;
-
-        //console.log('### apiKey = ', apiKey);
-
-        //const token = localStorage.getItem('token');
-        //token ? login({ token }) : initialize();
-
+        const { initialize } = this.props;
         initialize();
 
-        if (authenticated) {
-            if (location.pathname === pages.profile) {
-               return;
-            }
-            history.replace(pages.feed);
-        }
-
     }
 
-    componentWillReceiveProps ({ authenticated, initialized, location, history }) {
-        if (authenticated && !initialized) {
-            this.props.initialize();
-        }
-
-        if (authenticated) {
-            if (location.pathname === pages.login ) {
-                history.replace(pages.feed);
-            }
-        }
-    }
-
-    render() {
-        const { authenticated, initialized } = this.props;
+    render () {
+        const { initialized } = this.props;
         return initialized ?
             <Switch>
-                {!authenticated && <Public />}
-                <Private />
+                <General />
             </Switch>
-            :( <Loading />);
+            : (<Loading />);
     }
 }
 
 const mapStateToProps = (state) => ({
-    authenticated: state.auth.get('authenticated'),
-    initialized:   state.ui.get('initialized')
+    initialized: state.ui.get('initialized')
 });
 
 const { initialize } = uiActions;
-const { login } = authActions;
 
 const mapDispatchToProps = (dispatch) => ({
-    // function bindActionCreators<A extends ActionCreator<any>>(actionCreator: A, dispatch: Dispatch<any>)
-    //...bindActionCreators(uiActions.initialize, authActions.login, dispatch)
-    ...bindActionCreators({ initialize, login }, dispatch)
+    ...bindActionCreators({ initialize }, dispatch)
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Routes));

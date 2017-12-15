@@ -15,11 +15,11 @@ export default (state = initialState, { type }) => {
         case types.INITIALIZE:
             return state.set('initialized', true);
 
-        case types.START_FETCHING_AUTH:
-            return state.set('authFetching', true);
-
-        case types.STOP_FETCHING_AUTH:
-            return state.set('authFetching', false);
+        // case types.START_FETCHING_AUTH:
+        //     return state.set('authFetching', true);
+        //
+        // case types.STOP_FETCHING_AUTH:
+        //     return state.set('authFetching', false);
 
         case types.START_FETCHING_FEED:
             return state.set('feedFetching', true);
