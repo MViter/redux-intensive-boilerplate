@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad78c952-a5c7-47ac-889c-b945c7376a0d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/Guest/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/containers/Guest/styles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Home/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Home/styles.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Input/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Menu/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Menu/styles.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/watchlist/index.js" afterPath="$PROJECT_DIR$/src/actions/watchlist/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/index.js" afterPath="$PROJECT_DIR$/src/components/Grid/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Movie/index.js" afterPath="$PROJECT_DIR$/src/components/Movie/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Movie/styles.scss" afterPath="$PROJECT_DIR$/src/components/Movie/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Navigation/index.js" afterPath="$PROJECT_DIR$/src/components/Navigation/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Feed/index.js" afterPath="$PROJECT_DIR$/src/containers/Feed/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/Watchlist/index.js" afterPath="$PROJECT_DIR$/src/containers/Watchlist/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/feed/index.js" afterPath="$PROJECT_DIR$/src/reducers/feed/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/feedDetailedMovie/index.js" afterPath="$PROJECT_DIR$/src/reducers/feedDetailedMovie/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/ui/index.js" afterPath="$PROJECT_DIR$/src/reducers/ui/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/General/index.js" afterPath="$PROJECT_DIR$/src/routes/General/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/index.js" afterPath="$PROJECT_DIR$/src/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sagas/feedWatchlist/workers/addToWatchlist/index.js" afterPath="$PROJECT_DIR$/src/sagas/feedWatchlist/workers/addToWatchlist/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/styles.scss" afterPath="$PROJECT_DIR$/src/components/Grid/styles.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,13 +26,23 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Grid/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="324">
+              <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
               <folding>
                 <element signature="e#105#154#0" expanded="true" />
                 <element signature="e#203#242#0" expanded="true" />
                 <element signature="e#308#337#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Grid/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,30 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/Feed/styles.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sagas/feedWatchlist/workers/addToWatchlist/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/DetailedMovie/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
+            <state relative-caret-position="1206">
               <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
               <folding>
                 <marker date="1513517695055" expanded="true" signature="2471:4713" ph="..." />
@@ -202,10 +184,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/selectors/detailedMovie/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Menu/index.js" />
         <option value="$PROJECT_DIR$/src/components/Catcher/index.js" />
         <option value="$PROJECT_DIR$/src/components/Catcher/styles.css" />
-        <option value="$PROJECT_DIR$/src/components/Grid/styles.scss" />
         <option value="$PROJECT_DIR$/src/instruments/helpers.js" />
         <option value="$PROJECT_DIR$/src/actions/feed/index.js" />
         <option value="$PROJECT_DIR$/src/actions/feed/types.js" />
@@ -249,9 +229,11 @@
         <option value="$PROJECT_DIR$/src/containers/Feed/index.js" />
         <option value="$PROJECT_DIR$/src/components/Movie/styles.scss" />
         <option value="$PROJECT_DIR$/src/components/Movie/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Grid/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Watchlist/index.js" />
         <option value="$PROJECT_DIR$/src/containers/DetailedMovie/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Grid/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Grid/styles.scss" />
+        <option value="$PROJECT_DIR$/src/components/Menu/index.js" />
       </list>
     </option>
   </component>
@@ -303,215 +285,13 @@
               <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
               <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-              <item name="watchlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
               <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Grid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Movie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="DetailedMovie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Watchlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-              <item name="feedDetailedMovie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-              <item name="watchlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="General" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchGenres" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchNewMovies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchPopularMovies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feed" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchTopRatedMovies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feedWatchlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feedWatchlist" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
-              <item name="feedWatchlist" type="462c0819:PsiDirectoryNode" />
-              <item name="workers" type="462c0819:PsiDirectoryNode" />
-              <item name="addToWatchlist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="selectors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="selectors" type="462c0819:PsiDirectoryNode" />
-              <item name="detailedMovie" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redux-intensive-boilerplate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redux-intensive-boilerplate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -584,25 +364,24 @@
       <workItem from="1513412996966" duration="30319000" />
       <workItem from="1513459020583" duration="43000" />
       <workItem from="1513459078669" duration="7391000" />
-      <workItem from="1513505506800" duration="10945000" />
+      <workItem from="1513505506800" duration="12169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125686000" />
+    <option name="totallyTimeSpent" value="126910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="-4" width="1873" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16648649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16648649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04502618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35287958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -628,27 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/instruments/validators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instruments/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/ReduxJS_intensive/redux-intensive-boilerplate-master/src/components/Navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sagas/watchlist/workers/fetchWatchlist/index.js" />
     <entry file="file://$PROJECT_DIR$/src/sagas/watchlist/index.js" />
     <entry file="file://$PROJECT_DIR$/src/actions/feed/index.js">
@@ -978,18 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Grid/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="41" />
-          <folding>
-            <element signature="e#105#154#0" expanded="true" />
-            <element signature="e#203#242#0" expanded="true" />
-            <element signature="e#308#337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Movie/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1652">
@@ -1025,7 +771,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/DetailedMovie/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="1206">
           <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
           <folding>
             <marker date="1513517695055" expanded="true" signature="2471:4713" ph="..." />
@@ -1044,6 +790,42 @@
             <marker date="1513517695055" expanded="true" signature="4227:4228" ph="..." />
             <marker date="1513517695055" expanded="true" signature="4874:4935" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding>
+            <element signature="e#105#154#0" expanded="true" />
+            <element signature="e#203#242#0" expanded="true" />
+            <element signature="e#308#337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Menu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

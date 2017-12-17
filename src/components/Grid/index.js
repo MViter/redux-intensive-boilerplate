@@ -39,7 +39,7 @@ class Grid extends Component {
     }
     componentWillMount () {
         this.props.dispatch(feedActions.fetchGenres());
-        this.props.dispatch(feedActions.fetchTopRatedMovies());
+        this.props.dispatch(feedActions.fetchNewMovies());
     }
 
     mapGenreIdToGenreName (id, genres = []) {
