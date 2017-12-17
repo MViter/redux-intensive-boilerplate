@@ -148,33 +148,19 @@ p {
         left: 0;
       }
 
-      heart:before {
-        content: 'Add to watchlist ';
-        color: black;
+      .heart {
         font-size: 32px;
-        cursor: pointer;
-      }
+        &:after {
+          content: '\2665';
+          color: black;
+          opacity: 1;
+          cursor: pointer;
+        }
 
-      .heart:after {
-        content: '\2665';
-        color: black;
-        font-size: 32px;
-        cursor: pointer;
+        &:hover {
+          opacity: 0.5;
+        }
       }
-      .chosenHeart:before {
-        content: 'Added to watchlist ';
-        color: #de2b24;
-        font-size: 26px;
-        cursor: pointer;
-      }
-
-      .chosenHeart:after {
-        content: '\2665';
-        color: #de2b24;
-        font-size: 32px;
-        cursor: pointer;
-      }
-
       }
     }
   }

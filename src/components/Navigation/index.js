@@ -8,9 +8,6 @@ import Styles from './styles.scss';
 import pages from 'routes/pages';
 import logo from '../../theme/assets/logosmall.png';
 
-// Components
-//import Menu from 'components/Menu';
-
 export default class Navigation extends Component {
 
     static propTypes = {
@@ -75,11 +72,9 @@ export default class Navigation extends Component {
                 Watchlist
             </NavLink>
         ];
-
     }
 
     _getWatchlist () {
-        console.log('this.props ', this.props);
         this.props.fetchWatchlist();
     }
 

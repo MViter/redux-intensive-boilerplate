@@ -11,7 +11,7 @@ export function* addToWatchlistWorker ({ payload: movieToAdd }) {
         let watchlistStorage = JSON.parse(localStorage.getItem('Watchlist'));
 
         watchlistStorage = watchlistStorage || [];
-        console.log(`111 watchlistStorage = ${watchlistStorage}, typeof watchlistStorage = ${typeof watchlistStorage}`);
+        //console.log(`watchlistStorage = ${watchlistStorage}, typeof watchlistStorage = ${typeof watchlistStorage}`);
 
         watchlistStorage.push(movieToAdd);
         watchlistStorage = Array.from(new Set(watchlistStorage));

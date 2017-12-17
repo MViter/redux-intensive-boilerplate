@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // Instruments
-import { bool, object } from 'prop-types';
+import { bool, object, array } from 'prop-types';
 import feedActions from 'actions/feed';
 
 // Components
@@ -16,7 +16,7 @@ class Feed extends Component {
     static propTypes = {
         feedFetching: bool.isRequired,
         genres:       object.isRequired,
-        results:      object.isRequired
+        results:      array.isRequired
     };
 
     static defaultProps = {

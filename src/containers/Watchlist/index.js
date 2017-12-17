@@ -30,10 +30,6 @@ class Watchlist extends Component {
         this.props.actions.fetchWatchlist();
     }
 
-    // _mapIdToFullMovie (movieItem) {
-    //     if (results.id.include(movieItem))
-    //         return results
-    // }
     render () {
         const { watchlist } = this.props;
         // const { results } = this.props;
@@ -43,11 +39,6 @@ class Watchlist extends Component {
         const watchlistToIterable = watchlist.map((movieId, index) => (
             <div key = { index }>{ movieId}</div>
         ));
-
-        // const watchlistMoviesInfo = watchlist.filter((movieItem) => {
-        //     if (results.id.includes(movieId))
-        //         return results
-        // });
 
         return [
             feedFetching?

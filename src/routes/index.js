@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { bool, func, object } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Switch, withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 
 // Instruments
 import uiActions from 'actions/ui';
@@ -30,11 +30,7 @@ class Routes extends Component {
     render () {
         const { initialized } = this.props;
 
-        return initialized ?
-            <Switch>
-                <General />
-            </Switch>
-            : (<Loading />);
+        return initialized ? <General /> : (<Loading />);
     }
 }
 

@@ -5,9 +5,8 @@ import { List, Map } from 'immutable';
 import types from 'actions/feed/types';
 
 const initialState = Map({
-    results:     [],
-    genres:      [],
-    likedMovies: []
+    results: [],
+    genres:  []
 });
 
 const feedReducer = (state = initialState, { type, payload }) => {
@@ -17,9 +16,8 @@ const feedReducer = (state = initialState, { type, payload }) => {
         case types.FETCH_UPCOMING_MOVIES_SUCCESS:
         case types.FETCH_TOPRATED_MOVIES_SUCCESS:
             return {
-                results:     List(payload), // not payload.results - this was a great mistake :)
-                likedMovies: List(),
-                genres:      state.genres
+                results: List(payload),
+                genres:  state.genres
             };
 
         case types.FETCH_GENRES_SUCCESS:

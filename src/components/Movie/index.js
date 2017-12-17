@@ -94,7 +94,7 @@ export default class Movie extends Component {
                         <NavLink
                             activeClassName = { Styles.active }
                             className = { Styles.viewMove }
-                            title = 'Details'
+                            title = 'Open details'
                             to = { `${pages.detailedmovie}/${id}` }>
                             Details
                         </NavLink>

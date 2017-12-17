@@ -37,7 +37,7 @@ class Grid extends Component {
         this.fetchWatchlist = ::this._fetchWatchlist;
         this.addToWatchlist = ::this._addToWatchlist;
     }
-    componentDidMount () {
+    componentWillMount () {
         this.props.dispatch(feedActions.fetchGenres());
         this.props.dispatch(feedActions.fetchTopRatedMovies());
     }

@@ -5,7 +5,7 @@ export default{
     fetchWatchlist: () => ({
         type: types.FETCH_WATCHLIST
     }),
-    fetchWatchlistSuccess: (ADD_TO_WATCHLIST_SUCCESSmovieIDs) => ({
+    fetchWatchlistSuccess: (movieIDs) => ({
         type:    types.FETCH_WATCHLIST_SUCCESS,
         payload: movieIDs
     }),

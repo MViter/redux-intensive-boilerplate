@@ -22,7 +22,6 @@ const feedDetailedMovieReducer = (state = initialState, { type, payload }) => {
             return state.merge(payload);
 
         case types.CLEAR_DETAILED_MOVIE:
-
             return state;
 
         default:
