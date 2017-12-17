@@ -27,7 +27,7 @@ const logger = createLogger({
 
 const history = createHistory();
 
-const middleware = [routerMiddleware(history)]; // for working with routes
+const middleware = [routerMiddleware(history)];
 
 const sagaMiddleware = createSagaMiddleware();
 

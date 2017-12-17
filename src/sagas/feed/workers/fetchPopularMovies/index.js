@@ -1,6 +1,5 @@
 // Core
-import { call, put, select } from 'redux-saga/effects';
-import { normalize } from 'normalizr';
+import { call, put } from 'redux-saga/effects';
 
 // Instruments
 import feedActions from 'actions/feed';
@@ -11,9 +10,10 @@ export function* fetchPopularMoviesWorker () {
     try {
 
         const defaultPage = '1';
+
         yield put(uiActions.startFetchingFeed());
 
-        const response = yield call(fetch, `${api}/3/movie/popular?api_key=${ apiKey }&page=${ defaultPage }`, {
+        const response = yield call(fetch, `${api}/3/movie/popular?api_key=${apiKey}&page=${defaultPage}`, {
             method:  'GET',
             headers: {
                 Authorization: apiKey
@@ -23,7 +23,7 @@ export function* fetchPopularMoviesWorker () {
         const { results } = yield call([response, response.json]);
 
         if (response.status !== 200) {
-            throw new Error(message);
+            throw new Error('Popular movies were not found');
         }
 
         yield put(feedActions.fetchPopularMoviesSuccess(results));

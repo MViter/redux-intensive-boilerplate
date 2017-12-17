@@ -3,29 +3,26 @@ import React, { Component } from 'react';
 
 // Instruments
 import Styles from './styles.scss';
-import { func, bool, string, number } from 'prop-types';
+import { func, string, number } from 'prop-types';
 import pages from 'routes/pages';
 import { NavLink } from 'react-router-dom';
-
-// Components
 
 export default class Movie extends Component {
 
     static propTypes = {
-        genres:      string.isRequired,
-        getDetails:  func.isRequired,
-        id:          number.isRequired,
-        index:       string.isRequired,
-        overview:    string.isRequired,
-        posterPath:  string.isRequired,
-        releaseDate: string.isRequired,
-        title:       string.isRequired,
-        voteAverage: number.isRequired
+        addToWatchlist: func.isRequired,
+        genres:         string.isRequired,
+        id:             number.isRequired,
+        index:          string.isRequired,
+        overview:       string.isRequired,
+        posterPath:     string.isRequired,
+        releaseDate:    string.isRequired,
+        title:          string.isRequired,
+        voteAverage:    number.isRequired
     };
 
     static defaultProps = {
         genres:      '',
-        getDetails:  new Function(),
         id:          '',
         index:       '',
         overview:    '',
@@ -39,59 +36,24 @@ export default class Movie extends Component {
         super();
 
         this.handleLikeMovie = ::this._handleLikeMovie;
-        this.getDetails = ::this._getDetails;
         this.likeDesign = ::this._likeDesign;
-        localStorage.setItem('LikedMovies', 'Thor: Ragnarok');
+
     }
 
-    _handleLikeMovie (event) {
+    _handleLikeMovie () {
+        const movieToAdd = this.props.id;
 
-        const movieTitle = event.target.title;
-        const likedMovieStorage = localStorage.getItem('LikedMovies');
-
-        try {
-
-            if (likedMovieStorage) {
-
-                if (likedMovieStorage.indexOf(movieTitle) === -1) {
-                    localStorage.setItem('LikedMovies', likedMovieStorage.concat(movieTitle));
-
-                } else {
-                    const unlikedPosStart = likedMovieStorage.indexOf(movieTitle);
-                    const unlikedPosEnd = likedMovieStorage.indexOf(',', unlikedPosStart);
-                    const storageWithoutUnlikedMovie = likedMovieStorage.slice(0, unlikedPosStart).concat(likedMovieStorage.slice(unlikedPosEnd, likedMovieStorage.length-1));
-
-                    localStorage.removeItem('LikedMovies');
-                    localStorage.setItem('LikedMovies', storageWithoutUnlikedMovie);
-                }
-
-            } else {
-                localStorage.setItem('LikedMovies', movieTitle);
-            }
-
-            this._likeDesign(movieTitle);
-            this.forceUpdate();
-        } catch (e) {
-            console.log('Error: ', e.text);
-            return 0;
-        }
+        this.props.addToWatchlist(movieToAdd);
     }
 
-    _likeDesign (movie) {
-
-        const isMovieInStorage = (localStorage.getItem('LikedMovies')).indexOf(movie) !== -1;
-        return isMovieInStorage
-            ? <a alt = 'Add to wishlist' className = { Styles.chosenHeart } title = { movie } onClick = { this.handleLikeMovie } />
-            : <a alt = 'Add to wishlist' className = { Styles.heart } title = { movie } onClick = { this.handleLikeMovie } />;
-    }
-    _getDetails () {
-        this.props.getDetails(this.props.id);
+    _likeDesign () {
+        return <a alt = 'Add to wishlist' className = { Styles.heart } title = { 'Add to Watchlist' } onClick = { this.handleLikeMovie } />;
     }
 
     render () {
 
         const movieTitle = this.props.title;
-        const like = this._likeDesign(movieTitle);
+        const addToWatchlist = this._likeDesign(movieTitle);
 
         const {
             id,
@@ -105,9 +67,6 @@ export default class Movie extends Component {
         } = this.props;
 
         const adaptedPosterPath = `https://image.tmdb.org/t/p/w500/${posterPath}`;
-        // const isLiked =  localStorage.getItem('LikedMovies').indexOf(localStorage.getItem(event.target.title)) === -1
-        //     ? Styles.likeMovie
-        //     : Styles.likedMovie;
         const linkToMovie = `https://www.themoviedb.org/movie/${id}`;
 
         return (
@@ -137,10 +96,9 @@ export default class Movie extends Component {
                             className = { Styles.viewMove }
                             title = 'Details'
                             to = { `${pages.detailedmovie}/${id}` }>
-                            /*onClick = { this.getDetails }>*/
                             Details
                         </NavLink>
-                        { like }
+                        { addToWatchlist }
                     </p>
 
                 </div>

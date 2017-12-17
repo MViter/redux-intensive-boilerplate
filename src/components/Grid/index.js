@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 // Instruments
-import { array, func } from 'prop-types';
+import { func, object, array } from 'prop-types';
 import Styles from './styles.scss';
-import actions from 'actions/feed';
-import feedDetailedMovieActions from 'actions/feedDetailedMovie';
-//import { mapGenreIdToGenreName } from 'instruments/helpers';
+
+// Actions
+import feedActions from 'actions/feed';
+import watchlistActions from 'actions/watchlist';
 
 // Components
 import Movie from '../Movie';
@@ -17,7 +18,7 @@ class Grid extends Component {
 
     static propTypes = {
         dispatch: func.isRequired,
-        genres:   array.isRequired,
+        genres:   object.isRequired,
         results:  array.isRequired
     };
 
@@ -33,12 +34,12 @@ class Grid extends Component {
         this.fetchNewMovies = ::this._fetchNewMovies;
         this.fetchPopularMovies = ::this._fetchPopularMovies;
         this.fetchUpcomingMovies = ::this._fetchUpcomingMovies;
-        this.fetchDetailedMovie = ::this._fetchDetailedMovie;
+        this.fetchWatchlist = ::this._fetchWatchlist;
+        this.addToWatchlist = ::this._addToWatchlist;
     }
     componentDidMount () {
-        //this.props.actions.fetchNewMovies();
-        this.props.dispatch(actions.fetchGenres());
-        this.props.dispatch(actions.fetchTopRatedMovies());
+        this.props.dispatch(feedActions.fetchGenres());
+        this.props.dispatch(feedActions.fetchTopRatedMovies());
     }
 
     mapGenreIdToGenreName (id, genres = []) {
@@ -53,23 +54,27 @@ class Grid extends Component {
     }
 
     _fetchTopRatedMovies () {
-        this.props.dispatch(actions.fetchTopRatedMovies());
+        this.props.dispatch(feedActions.fetchTopRatedMovies());
     }
 
     _fetchNewMovies () {
-        this.props.dispatch(actions.fetchNewMovies());
+        this.props.dispatch(feedActions.fetchNewMovies());
     }
 
     _fetchPopularMovies () {
-        this.props.dispatch(actions.fetchPopularMovies());
+        this.props.dispatch(feedActions.fetchPopularMovies());
     }
 
     _fetchUpcomingMovies () {
-        this.props.dispatch(actions.fetchUpcomingMovies());
+        this.props.dispatch(feedActions.fetchUpcomingMovies());
     }
 
-    _fetchDetailedMovie (movieId) {
-        this.props.dispatch(feedDetailedMovieActions.fetchDetailedMovie(movieId));
+    _fetchWatchlist () {
+        this.props.dispatch(watchlistActions.fetchWatchlist());
+    }
+
+    _addToWatchlist (movieToAddId) {
+        this.props.dispatch(watchlistActions.addToWatchlist(movieToAddId));
     }
 
     render () {
@@ -83,9 +88,11 @@ class Grid extends Component {
             poster_path:posterPath,
             genre_ids:genreIds,
             overview,
-            release_date:releaseDate }, index) => {
-            return (
+            release_date:releaseDate }, index) => (
+            (
                 <Movie
+                    addToWatchlist = { this.addToWatchlist }
+                    genreIds = { genreIds }
                     genres = {
                         genreIds.reduce((accum, genreId) => {
                             if (accum) {
@@ -96,8 +103,6 @@ class Grid extends Component {
                         }
                             , '')
                     }
-                    genreIds = { genreIds }
-                    getDetails = { this.fetchDetailedMovie }
                     id = { id }
                     key = { index }
                     overview = { overview }
@@ -106,8 +111,8 @@ class Grid extends Component {
                     title = { title }
                     voteAverage = { voteAverage }
                 />
-            );
-        });
+            )
+        ));
 
         return (
             <section className = { Styles.grid } >
@@ -117,9 +122,10 @@ class Grid extends Component {
                         fetchPopularMovies = { this.fetchPopularMovies }
                         fetchTopRatedMovies = { this.fetchTopRatedMovies }
                         fetchUpcomingMovies = { this.fetchUpcomingMovies }
+                        fetchWatchlist = { this.fetchWatchlist }
                     />
                 </div>
-                <span className = { Styles.typeOfDisplayedMovies }></span>
+                <span className = { Styles.typeOfDisplayedMovies } />
                 <div className = { Styles.contentWrap }>
                     { movieArray }
                 </div>

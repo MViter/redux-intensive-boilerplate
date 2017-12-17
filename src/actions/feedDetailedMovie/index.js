@@ -12,5 +12,8 @@ export default{
     fetchDetailedMovieFail: (error) => ({
         type:    types.FETCH_DETAILED_MOVIE_FAIL,
         payload: error
+    }),
+    clearDetailedMovie: () => ({
+        type: types.CLEAR_DETAILED_MOVIE
     })
 };

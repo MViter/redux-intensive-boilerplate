@@ -17,13 +17,15 @@ export default class Navigation extends Component {
         fetchNewMovies:      func.isRequired,
         fetchPopularMovies:  func.isRequired,
         fetchTopRatedMovies: func.isRequired,
-        fetchUpcomingMovies: func.isRequired
+        fetchUpcomingMovies: func.isRequired,
+        fetchWatchlist:      func.isRequired
     };
 
     constructor () {
         super();
 
         this.getNavigation = ::this._getNavigation;
+        this.getWatchlist = ::this._getWatchlist;
     }
     _getNavigation () {
 
@@ -59,7 +61,7 @@ export default class Navigation extends Component {
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '3'
-                to = { pages.new }
+                to = { `/feed${pages.new}` }
                 onClick = { fetchNewMovies }>
                 New
             </NavLink>,
@@ -67,17 +69,23 @@ export default class Navigation extends Component {
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '4'
-                to = { pages.watchlist } >
-                See Watchlist
+                title = 'Watchlist'
+                to = { pages.watchlist }
+                onClick = { this.getWatchlist }>
+                Watchlist
             </NavLink>
         ];
 
     }
 
+    _getWatchlist () {
+        console.log('this.props ', this.props);
+        this.props.fetchWatchlist();
+    }
+
     render () {
 
         const navigation = this.getNavigation();
-        //const dropDownMenu = this.getDropDown();
 
         return (<section className = { Styles.navigation }>
             <div className = { Styles.logo }>

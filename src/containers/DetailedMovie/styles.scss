@@ -17,6 +17,10 @@
     img {
       width: 100%;
       opacity: 0.7;
+      -webkit-filter: blur(3px);
+      -moz-filter: blur(3px);
+      filter: blur(3px);
+      image-rendering: optimizeSpeed;
     }
   }
 
@@ -86,6 +90,7 @@
       }
 
       .tagline {
+        font-style: italic;
         position: relative;
         box-sizing: border-box;
         padding: 5px 8px 8px 8px;
@@ -161,62 +166,59 @@
       }
 
       .infoFooter {
-        border-top: 2px solid #e3e3e3;
         display: flex;
-        justify-content: flex-end;
-        padding: 7px;
-
-        .heart:before {
-          content: 'Add to watchlist ';
-          color: red;
-          font-size: 32px;
-          cursor: pointer;
-        }
-
-        .heart:after {
-          content: '\2665';
-          color: red;
-          font-size: 32px;
-          cursor: pointer;
-        }
-        .chosenHeart:before {
-          content: 'Added to watchlist ';
-          color: #de2b24;
-          font-size: 26px;
-          cursor: pointer;
-        }
-
-        .chosenHeart:after {
-          content: '\2665';
-          color: #de2b24;
-          font-size: 32px;
-          cursor: pointer;
-        }
-
-      }
-    }
-
-    .returnSection {
-
-      position: relative;
-      box-sizing: border-box;
-
-
-      .returnBtn {
-        margin-top: 20px;
-        opacity: 0.7;
-        display: inline-block;
-        font-weight: 600;
+        justify-content: space-between;
+        text-transform: uppercase;
+        padding: 10px;
         font-size: 26px;
         line-height: 1.2em;
-        white-space: normal;
-        overflow: hidden;
 
-        &:hover {
+        .heart {
+          &:before {
+            content: 'add to watchlist ';
+            color: black;
+            cursor: pointer;
+          }
+
+          &:after {
+            content: '\2665';
+            color: black;
+            cursor: pointer;
+          }
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        .chosenHeart {
+          &:before {
+            content: 'added to watchlist ';
+            color: #de2b24;
+            cursor: pointer;
+          }
+
+          &:after {
+            content: '\2665';
+            color: #de2b24;
+            cursor: pointer;
+          }
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+
+        .returnBtn {
           opacity: 1;
-      }
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
       }
     }
+
   }
 }
 

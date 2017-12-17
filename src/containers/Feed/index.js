@@ -4,20 +4,19 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // Instruments
-import { array, bool, object } from 'prop-types';
+import { bool, object } from 'prop-types';
 import feedActions from 'actions/feed';
 
 // Components
 import Grid from 'components/Grid';
 import Spinner from 'components/Spinner';
-import Navigation from 'components/Navigation';
 
 class Feed extends Component {
 
     static propTypes = {
         feedFetching: bool.isRequired,
         genres:       object.isRequired,
-        results:      array.isRequired
+        results:      object.isRequired
     };
 
     static defaultProps = {

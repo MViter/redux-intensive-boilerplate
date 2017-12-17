@@ -16,13 +16,13 @@ import feedDetailedMovieActions from 'actions/feedDetailedMovie';
 
 // Component
 import Spinner from 'components/Spinner';
-import Navigation from 'components/Navigation';
 
 class DetailedMovie extends Component {
 
     static propTypes = {
-        feedFetching:  bool.isRequired,
+        actions:       object.isRequired,
         detailedMovie: object.isRequired,
+        feedFetching:  bool.isRequired,
         genres:        string.isRequired,
         id:            number.isRequired,
         index:         string.isRequired,
@@ -30,7 +30,6 @@ class DetailedMovie extends Component {
         popularity:    number.isRequired,
         posterPath:    string.isRequired,
         releaseDate:   string.isRequired,
-        status:        string.isRequired,
         tagline:       string.isRequired,
         title:         string.isRequired,
         voteAverage:   number.isRequired
@@ -51,14 +50,12 @@ class DetailedMovie extends Component {
     };
 
     componentWillMount () {
-        this.props.actions.fetchDetailedMovie(this.props.match.params.id);
-
+        this.props.actions.fetchDetailedMovie(this.props.match.params.id); // eslint-disable-line
     }
 
     render () {
         const {
             backdrop_path:backdropPath,
-            id,
             index,
             genres,
             overview,
@@ -116,24 +113,20 @@ class DetailedMovie extends Component {
                             </p>
                         </div>
                         <p className = { Styles.infoFooter }>
-                            <div className = { Styles.chosenHeart } />
-                        </p>
-                        <div className = { Styles.returnSection }>
+                            <span className = { Styles.heart } />
                             <NavLink
                                 activeClassName = { Styles.active }
                                 className = { Styles.returnBtn }
                                 title = 'Back'
                                 to = { pages.feed }>Back
                             </NavLink>
-                        </div>
+                        </p>
                     </div>
-
                 </section>
 
             </section>;
 
         return [
-            <Navigation key = '0' />,
             feedFetching?
                 <Spinner key = '1' spin = { feedFetching } />
                 :
@@ -144,19 +137,16 @@ class DetailedMovie extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        detailedMovie: state.feedDetailedMovie.toJS()
-    };
-};
+const mapStateToProps = (state) => ({
+    feedFetching:  state.ui.get('feedFetching'),
+    detailedMovie: state.feedDetailedMovie.toJS()
+});
 
 const { startFetchingFeed, stopFetchingFeed } = uiActions;
 const { fetchDetailedMovie } = feedDetailedMovieActions;
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(
-        { fetchDetailedMovie, startFetchingFeed, stopFetchingFeed },
-        dispatch
-    )
+        { fetchDetailedMovie, startFetchingFeed, stopFetchingFeed }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailedMovie);

@@ -148,24 +148,27 @@ p {
         left: 0;
       }
 
-      .heart:before {
-        content: '\2665';
-        color: red;
-        font-size: 32px;
-        cursor: pointer;
-
-      }
-
-      .heart:hover::before,
-      .heart:focus::before,
-      .heart:visited::before{
-        content: '\2665';
-        color: #de2b24;
+      heart:before {
+        content: 'Add to watchlist ';
+        color: black;
         font-size: 32px;
         cursor: pointer;
       }
 
+      .heart:after {
+        content: '\2665';
+        color: black;
+        font-size: 32px;
+        cursor: pointer;
+      }
       .chosenHeart:before {
+        content: 'Added to watchlist ';
+        color: #de2b24;
+        font-size: 26px;
+        cursor: pointer;
+      }
+
+      .chosenHeart:after {
         content: '\2665';
         color: #de2b24;
         font-size: 32px;

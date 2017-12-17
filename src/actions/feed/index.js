@@ -60,17 +60,5 @@ export default{
     fetchGenresFail: (error) => ({
         type:    types.FETCH_GENRES_FAIL,
         payload: error
-    }),
-    // **************************************************** //
-    fetchWishlist: () => ({
-        type: types.FETCH_WISHLIST
-    }),
-    fetchWishlistSuccess: (movies) => ({
-        type:    types.FETCH_WISHLIST_SUCCESS,
-        payload: movies
-    }),
-    fetchWishlistFail: (message) => ({
-        type:    types.FETCH_WISHLIST_FAIL,
-        payload: message
     })
 };

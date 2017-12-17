@@ -17,10 +17,13 @@ const initialState = Map({
 
 const feedDetailedMovieReducer = (state = initialState, { type, payload }) => {
     switch (type) {
+
         case types.FETCH_DETAILED_MOVIE_SUCCESS:
-            console.log('getDetails in Reducers/FETCH_DETAILED_MOVIE_SUCCESS - 3');
             return state.merge(payload);
-            //return state.merge(payload);
+
+        case types.CLEAR_DETAILED_MOVIE:
+
+            return state;
 
         default:
             return state;

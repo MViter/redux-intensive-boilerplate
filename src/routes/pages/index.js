@@ -7,5 +7,5 @@ export default Object.freeze({
     popular:       '/popular',
     new:           '/new',
     detailedmovie: '/detailedmovie',
-    'watchlist':   '/watchlist'
+    watchlist:     '/watchlist'
 });

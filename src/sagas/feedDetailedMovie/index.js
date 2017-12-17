@@ -9,4 +9,4 @@ export default {
     * fetchDetailedMovieWatcher () {
         yield takeEvery(types.FETCH_DETAILED_MOVIE, fetchDetailedMovieWorker);
     }
-}
+};

@@ -4,6 +4,7 @@ import { all } from 'redux-saga/effects';
 // Instruments
 import feed from './feed';
 import feedDetailedMovie from './feedDetailedMovie';
+import feedWatchlist from './feedWatchlist';
 
 export function* saga () {
     yield all([
@@ -12,7 +13,8 @@ export function* saga () {
         feed.fetchUpcomingMoviesWatcher(),
         feed.fetchTopRatedMoviesWatcher(),
         feed.fetchGenresWatcher(),
-        feed.fetchWishlistWatcher(),
-        feedDetailedMovie.fetchDetailedMovieWatcher()
+        feedDetailedMovie.fetchDetailedMovieWatcher(),
+        feedWatchlist.fetchWatchlistWatcher(),
+        feedWatchlist.addToWatchlistWatcher()
     ]);
 }

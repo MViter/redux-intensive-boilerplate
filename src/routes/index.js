@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import { Switch, withRouter } from 'react-router';
 
 // Instruments
-import pages from './pages';
 import uiActions from 'actions/ui';
 
 //Components
@@ -24,12 +23,13 @@ class Routes extends Component {
 
     componentDidMount () {
         const { initialize } = this.props;
-        initialize();
 
+        initialize();
     }
 
     render () {
         const { initialized } = this.props;
+
         return initialized ?
             <Switch>
                 <General />

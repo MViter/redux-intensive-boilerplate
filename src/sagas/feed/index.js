@@ -8,7 +8,6 @@ import { fetchPopularMoviesWorker } from './workers/fetchPopularMovies';
 import { fetchUpcomingMoviesWorker } from './workers/fetchUpcomingMovies';
 import { fetchTopRatedMoviesWorker } from './workers/fetchTopRatedMovies';
 import { fetchGenresWorker } from './workers/fetchGenres';
-import { fetchWishlistWorker } from './workers/fetchWatchlist';
 
 export default {
     * fetchGenresWatcher () {
@@ -25,8 +24,5 @@ export default {
     },
     * fetchTopRatedMoviesWatcher () {
         yield takeEvery(types.FETCH_TOPRATED_MOVIES, fetchTopRatedMoviesWorker);
-    },
-    * fetchWishlistWatcher () {
-        yield takeEvery(types.FETCH_WISHLIST, fetchWishlistWorker);
     }
 };
