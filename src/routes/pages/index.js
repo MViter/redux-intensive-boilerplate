@@ -1,11 +1,10 @@
 export default Object.freeze({
     feed:          '/feed',
-    guest:         '/guest',
-    menu:          '/menu',
     upcoming:      '/upcoming',
-    'top-rated':   '/top-rated',
+    top_rated:     '/top_rated',     // eslint-disable-line
     popular:       '/popular',
-    new:           '/new',
+    now_playing:   '/now_playing',   // eslint-disable-line
     detailedmovie: '/detailedmovie',
-    watchlist:     '/watchlist'
+    watchlist:     '/watchlist',
+    loading:       '/loading'
 });

@@ -6,7 +6,7 @@ import feedDetailedMovieActions from 'actions/feedDetailedMovie';
 import uiActions from 'actions/ui';
 import { api, apiKey } from 'instruments/api';
 
-export function* fetchDetailedMovieWorker ({ payload: movieId=19404 }) {
+export function* fetchDetailedMovieWorker ({ payload: movieId }) {
     try {
 
         const defaultPage = '1';

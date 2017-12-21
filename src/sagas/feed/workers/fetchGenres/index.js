@@ -2,6 +2,7 @@
 import { call, put } from 'redux-saga/effects';
 
 // Instruments
+//import feedActions from 'actions/feed';
 import feedActions from 'actions/feed';
 import uiActions from 'actions/ui';
 import { api, apiKey } from 'instruments/api';

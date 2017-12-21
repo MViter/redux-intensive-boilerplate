@@ -30,6 +30,7 @@ class Grid extends Component {
     constructor () {
         super();
 
+        this.fetchMovies = ::this._fetchMovies;
         this.fetchTopRatedMovies = ::this._fetchTopRatedMovies;
         this.fetchNewMovies = ::this._fetchNewMovies;
         this.fetchPopularMovies = ::this._fetchPopularMovies;
@@ -38,8 +39,28 @@ class Grid extends Component {
         this.addToWatchlist = ::this._addToWatchlist;
     }
     componentWillMount () {
+        console.log('In componentWillMount');
+        //console.log('this.props.match.params = ', this.props.match.params);
+        //this.props.actions.fetchDetailedMovie(this.props.match.params.id);
+        //const type = this.props.params.match.params.filter;
+        const type = 'popular';
+
         this.props.dispatch(feedActions.fetchGenres());
-        this.props.dispatch(feedActions.fetchNewMovies());
+        this.props.dispatch(feedActions.fetchMovies(type));
+    }
+    componentWillReceiveProps (nextProps) {
+        console.log('In componentWillReceiveProps');
+        //const typeOfFetchingMovies = this.props.match.params.filter;
+        const filter = 'now_playing';
+       console.log('nextProps = ', nextProps);
+        console.log('this.props = ', this.props);
+        //this.props.dispatch(feedActions.fetchMovies(filter));
+
+        // if(nextProps.match.params.filter !== typeOfFetchingMovies) {
+        //     const filter = nextProps.match.params.filter;
+        //
+        //     this.props.dispatch(feedActions.fetchMovies(filter));
+        // }
     }
 
     mapGenreIdToGenreName (id, genres = []) {
@@ -51,6 +72,10 @@ class Grid extends Component {
         }
 
         return '';
+    }
+
+    _fetchMovies () {
+        this.props.dispatch(feedActions.fetchMovies());
     }
 
     _fetchTopRatedMovies () {
@@ -93,16 +118,16 @@ class Grid extends Component {
                 <Movie
                     addToWatchlist = { this.addToWatchlist }
                     genreIds = { genreIds }
-                    genres = {
-                        genreIds.reduce((accum, genreId) => {
-                            if (accum) {
-                                return `${accum}, ${this.mapGenreIdToGenreName(genreId, genres)}`;
-                            }
-
-                            return this.mapGenreIdToGenreName(genreId, genres);
-                        }
-                            , '')
-                    }
+                    // genres = {
+                    //     genreIds.reduce((accum, genreId) => {
+                    //         if (accum) {
+                    //             return `${accum}, ${this.mapGenreIdToGenreName(genreId, genres)}`;
+                    //         }
+                    //
+                    //         return this.mapGenreIdToGenreName(genreId, genres);
+                    //     }
+                    //         , '')
+                    // }
                     id = { id }
                     key = { index }
                     overview = { overview }
@@ -118,6 +143,7 @@ class Grid extends Component {
             <section className = { Styles.grid } >
                 <div className = { Styles.movieMenu }>
                     <Navigation
+                        fetchMovies = { this.fetchMovies }
                         fetchNewMovies = { this.fetchNewMovies }
                         fetchPopularMovies = { this.fetchPopularMovies }
                         fetchTopRatedMovies = { this.fetchTopRatedMovies }

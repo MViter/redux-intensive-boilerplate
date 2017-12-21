@@ -14,6 +14,8 @@ import detailedMovieActions from 'actions/feedDetailedMovie';
 
 // Components
 import Spinner from 'components/Spinner';
+import Movie from 'components/Movie';
+import Navigation from 'components/Navigation';
 
 class Watchlist extends Component {
 
@@ -31,32 +33,57 @@ class Watchlist extends Component {
     }
 
     render () {
-        const { watchlist } = this.props;
-        // const { results } = this.props;
+        const { watchlist, feedFetching } = this.props;
 
-        const { feedFetching } = this.props;
+        const path = this.props.match.path;
 
-        const watchlistToIterable = watchlist.map((movieId, index) => (
-            <div key = { index }>{ movieId}</div>
-        ));
+        const watchlistMovieArray = watchlist.map(({
+            genres,
+            id,
+            overview,
+            posterPath,
+            releaseDate,
+            title,
+            voteAverage
+        }, index) =>
+            (
+                <Movie
+                    genres = { genres }
+                    id = { id }
+                    key = { index }
+                    overview = { overview }
+                    path = { path }
+                    posterPath = { `https://image.tmdb.org/t/p/w500${posterPath}` }
+                    releaseDate = { releaseDate }
+                    title = { title }
+                    voteAverage = { voteAverage }
+                />
+            ));
+
+        const watchlistContent = watchlistMovieArray.count() === 1 && watchlistMovieArray.first().props.title === '' ?
+            <div>No movies in your watchlist</div>:
+            watchlistMovieArray;
 
         return [
-            feedFetching?
-                <Spinner key = '1' spin = { feedFetching } />
+            feedFetching ?
+                <Spinner key = '0' spin = { feedFetching } />
                 :
-                <section className = { Styles.watchlist } key = '1' >
-                    <div>{ watchlistToIterable }</div>
+                <section className = { Styles.watchlistGrid } key = '0' >
+                    <div>
+                        <Navigation fetchWatchlist = { this.fetchWatchlist } />
+                    </div>
+                    <div className = { Styles.contentWrap } >
+                        { watchlistContent }
+                    </div>
                 </section>
         ];
     }
 }
 
 const mapStateToProps = (state) => {
-    console.log('state: ', state);
-
     return {
-        feedFetching: state.ui.get('feedFetching'),
-        results:      state.feed.results,
+        feedFetching: state.ui.feedFetching,
+        //feedFetching: state.ui.get('feedFetching'),
         watchlist:    state.watchlist
     };
 };

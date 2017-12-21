@@ -8,13 +8,11 @@ import feedWatchlist from './feedWatchlist';
 
 export function* saga () {
     yield all([
-        feed.fetchNewMoviesWatcher(),
-        feed.fetchPopularMoviesWatcher(),
-        feed.fetchUpcomingMoviesWatcher(),
-        feed.fetchTopRatedMoviesWatcher(),
         feed.fetchGenresWatcher(),
+        feed.fetchMoviesWatcher(),
         feedDetailedMovie.fetchDetailedMovieWatcher(),
         feedWatchlist.fetchWatchlistWatcher(),
-        feedWatchlist.addToWatchlistWatcher()
+        feedWatchlist.addToWatchlistWatcher(),
+        feedWatchlist.deleteFromWatchlistWatcher()
     ]);
 }

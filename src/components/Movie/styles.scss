@@ -50,10 +50,19 @@ p {
     box-sizing: border-box;
     padding: 5px 8px 8px 8px;
 
+
+
     .infoHeader {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      .cross {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        text-align: center;
+      }
 
       .infoHeader_title {
 

@@ -1,5 +1,26 @@
 @import '../../theme/palette';
 
+.active {
+
+
+  .movieTypeMenuBtn {
+    line-height: 24px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $paletteColor6;
+    font-weight: 600;
+    font-size: 22px;
+    opacity: .7;
+    padding-right: 25px;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+}
+
 .navigation {
 
     display: inline-flex;
@@ -18,32 +39,11 @@
 
     a, button {
       display: block;
-    //  display: flex;
-    //  align-items: center;
-    //  justify-content: center;
-    //  height: 27px;
-    //  margin: 0 10px;
-    //  padding: 2px 10px;
-    //  background-color: transparent;
-    //  color: $paletteColor2;
-    //  font-size: 12px;
-    //  font-weight: 400;
-    //  text-decoration: none;
-    //  white-space: nowrap;
-    //  cursor: pointer;
-    //
-    //img {
-    //  width: 24px;
-    //  height: 24px;
-    //  margin-right: 5px;
-    //  border: 1px solid $rgbaColor1;
-    //  border-radius: 50%;
-    //}
 
-    &:hover {
-      background: $rgbaColor2;
+      &:hover {
+        background: $rgbaColor2;
+      }
     }
-  }
 
     .movieTypeMenu {
         align-self: center;
@@ -61,8 +61,11 @@
           opacity: .7;
           padding-right: 25px;
 
-          &:hover{
+          &:hover,
+          &:active
+          {
             opacity: 1;
+            color: #00E07B;
           }
         }
 
@@ -106,7 +109,4 @@
     outline: 0;
   }
 
-  .active {
-    background: $rgbaColor1;
-  }
 }

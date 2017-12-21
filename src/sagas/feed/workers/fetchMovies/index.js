@@ -6,14 +6,12 @@ import feedActions from 'actions/feed';
 import uiActions from 'actions/ui';
 import { api, apiKey } from 'instruments/api';
 
-export function* fetchTopRatedMoviesWorker () {
+export function* fetchMoviesWorker ({ payload: type = 'now_playing' }) {
     try {
-
+        yield put(uiActions.startFetchingFeed());
         const defaultPage = '1';
 
-        yield put(uiActions.startFetchingFeed());
-
-        const response = yield call(fetch, `${api}/3/movie/top_rated?api_key=${apiKey}&page=${defaultPage}`, {
+        const response = yield call(fetch, `${api}/3/movie/${type}?api_key=${apiKey}&page=${defaultPage}`, {
             method:  'GET',
             headers: {
                 Authorization: apiKey
@@ -23,14 +21,12 @@ export function* fetchTopRatedMoviesWorker () {
         const { results } = yield call([response, response.json]);
 
         if (response.status !== 200) {
-            throw new Error('Top-Rated movies were not found');
+            throw new Error('Error while fetching movies.');
         }
 
-        //const normalizedMovies = normalize(movies, [post]);
-        //const moviesNormalized = normalize(movies, [post]);
-        yield put(feedActions.fetchTopRatedMoviesSuccess(results));
+        yield put(feedActions.fetchMoviesSuccess(results));
     } catch ({ message }) {
-        yield put(feedActions.fetchTopRatedMoviesFail(message));
+        yield put(feedActions.fetchMoviesFail(message));
     } finally {
         yield put(uiActions.stopFetchingFeed());
     }

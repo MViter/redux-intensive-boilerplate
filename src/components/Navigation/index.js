@@ -26,41 +26,36 @@ export default class Navigation extends Component {
     }
     _getNavigation () {
 
-        const { fetchNewMovies, fetchPopularMovies, fetchTopRatedMovies, fetchUpcomingMovies } = this.props;
+        const { getWatchlist } = this.props;
 
         return [
             <NavLink
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '0'
-                to = { pages.popular }
-                onClick = { fetchPopularMovies }>
+                to = { `/feed${pages.popular}` }>
                 Popular
             </NavLink>,
             <NavLink
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '1'
-                to = { pages['top-rated'] }
-                onClick = { fetchTopRatedMovies }>
+                to = { `/feed${pages.top_rated}` }>
                 Top-Rated
             </NavLink>,
             <NavLink
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '2'
-                to = { pages.upcoming }
-                onClick = { fetchUpcomingMovies } >
+                to = { `/feed${pages.upcoming}` }>
                 Upcoming
             </NavLink>,
-
             <NavLink
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '3'
-                to = { `/feed${pages.new}` }
-                onClick = { fetchNewMovies }>
-                New
+                to = { `/feed${pages.now_playing}` }>
+                Now-Playing
             </NavLink>,
             <NavLink
                 activeClassName = { Styles.active }
@@ -68,7 +63,7 @@ export default class Navigation extends Component {
                 key = '4'
                 title = 'Watchlist'
                 to = { pages.watchlist }
-                onClick = { this.getWatchlist }>
+                onClick = { getWatchlist }>
                 Watchlist
             </NavLink>
         ];

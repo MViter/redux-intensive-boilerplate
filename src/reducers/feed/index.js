@@ -11,10 +11,7 @@ const initialState = Map({
 
 const feedReducer = (state = initialState, { type, payload }) => {
     switch (type) {
-        case types.FETCH_NEW_MOVIES_SUCCESS:
-        case types.FETCH_POPULAR_MOVIES_SUCCESS:
-        case types.FETCH_UPCOMING_MOVIES_SUCCESS:
-        case types.FETCH_TOPRATED_MOVIES_SUCCESS:
+        case types.FETCH_MOVIES_SUCCESS:
             return {
                 results: List(payload),
                 genres:  state.genres

@@ -13,9 +13,11 @@ import backgroung from '../../theme/assets/background.jpg';
 // Actions
 import uiActions from 'actions/ui';
 import feedDetailedMovieActions from 'actions/feedDetailedMovie';
+import watchlistActions from 'actions/watchlist';
 
 // Component
 import Spinner from 'components/Spinner';
+import Navigation from 'components/Navigation';
 
 class DetailedMovie extends Component {
 
@@ -50,7 +52,12 @@ class DetailedMovie extends Component {
     };
 
     componentWillMount () {
+        console.log('In DetailedMovie, this.props = ', this.props);
         this.props.actions.fetchDetailedMovie(this.props.match.params.id); // eslint-disable-line
+    }
+
+    componentWillUnmount () {
+        this.props.actions.clearDetailedMovie();
     }
 
     render () {
@@ -65,9 +72,10 @@ class DetailedMovie extends Component {
             runtime,
             tagline,
             title,
-            vote_average:voteAverage,
-            feedFetching
+            vote_average:voteAverage
         } = this.props.detailedMovie;
+
+        const { feedFetching } = this.props;
 
         const mapGenresToArray = genres.map((item) => item.name);
 
@@ -127,26 +135,37 @@ class DetailedMovie extends Component {
             </section>;
 
         return [
-            feedFetching?
-                <Spinner key = '1' spin = { feedFetching } />
+            feedFetching ? <Spinner key = '0' spin = { feedFetching } />
                 :
-                <section key = '1'>
-                    { movieItem }
+                <section key = '0'>
+                    <div>
+                        <Navigation fetchWatchlist = { this.fetchWatchlist } />
+                    </div>
+                    <div>
+                        { movieItem }
+                    </div>
                 </section>
         ];
     }
 }
 
-const mapStateToProps = (state) => ({
-    feedFetching:  state.ui.get('feedFetching'),
-    detailedMovie: state.feedDetailedMovie.toJS()
-});
+const mapStateToProps = (state) => {
+    return {
+        //feedFetching:  state.ui.get('feedFetching'),
+        feedFetching:  state.ui.feedFetching,
+        detailedMovie: state.feedDetailedMovie.toJS()
+    }
+};
+
 
 const { startFetchingFeed, stopFetchingFeed } = uiActions;
 const { fetchDetailedMovie } = feedDetailedMovieActions;
+const { clearDetailedMovie } = feedDetailedMovieActions;
+const { addToWatchlist } = watchlistActions;
+
 const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(
-        { fetchDetailedMovie, startFetchingFeed, stopFetchingFeed }, dispatch)
+        { clearDetailedMovie, fetchDetailedMovie, startFetchingFeed, stopFetchingFeed }, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DetailedMovie);

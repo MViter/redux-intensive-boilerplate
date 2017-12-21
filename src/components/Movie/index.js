@@ -10,15 +10,16 @@ import { NavLink } from 'react-router-dom';
 export default class Movie extends Component {
 
     static propTypes = {
-        addToWatchlist: func.isRequired,
-        genres:         string.isRequired,
-        id:             number.isRequired,
-        index:          string.isRequired,
-        overview:       string.isRequired,
-        posterPath:     string.isRequired,
-        releaseDate:    string.isRequired,
-        title:          string.isRequired,
-        voteAverage:    number.isRequired
+        genres:              string.isRequired,
+        id:                  number.isRequired,
+        index:               string.isRequired,
+        overview:            string.isRequired,
+        posterPath:          string.isRequired,
+        releaseDate:         string.isRequired,
+        title:               string.isRequired,
+        voteAverage:         number.isRequired,
+        deleteFromWatchlist: func,
+        path:                string
     };
 
     static defaultProps = {
@@ -37,24 +38,11 @@ export default class Movie extends Component {
 
         this.handleLikeMovie = ::this._handleLikeMovie;
         this.likeDesign = ::this._likeDesign;
+        this.handleDeleteMovie = ::this._handleDeleteMovie;
 
     }
 
     _handleLikeMovie () {
-        const movieToAdd = this.props.id;
-
-        this.props.addToWatchlist(movieToAdd);
-    }
-
-    _likeDesign () {
-        return <a alt = 'Add to wishlist' className = { Styles.heart } title = { 'Add to Watchlist' } onClick = { this.handleLikeMovie } />;
-    }
-
-    render () {
-
-        const movieTitle = this.props.title;
-        const addToWatchlist = this._likeDesign(movieTitle);
-
         const {
             id,
             index,
@@ -66,7 +54,56 @@ export default class Movie extends Component {
             voteAverage
         } = this.props;
 
-        const adaptedPosterPath = `https://image.tmdb.org/t/p/w500/${posterPath}`;
+        const movieToAdd = {
+            id,
+            index,
+            genres,
+            overview,
+            posterPath,
+            releaseDate,
+            title,
+            voteAverage
+        };
+
+        this.props.addToWatchlist(movieToAdd);
+    }
+
+    _handleDeleteMovie () {
+        this.props.deleteFromWatchlist(this.props.id);
+    }
+
+    _likeDesign () {
+        return <a alt = 'Add to wishlist' className = { Styles.heart } title = { 'Add to Watchlist' } onClick = { this.handleLikeMovie } />;
+    }
+
+    render () {
+
+        const {
+            id,
+            index,
+            genres,
+            overview,
+            path,
+            releaseDate,
+            title,
+            voteAverage
+        } = this.props;
+
+
+        const crossOrNotCross = path === '/watchlist' ?
+            <span className = { Styles.cross } onClick = { this.handleDeleteMovie } >x</span> :
+            null;
+
+        const movieTitle = this.props.title;
+        const addToWatchlist = path !== '/watchlist'? this._likeDesign(movieTitle) : null;
+
+
+        const posterUrl = this.props.poster_path ? this.props.poster_path : this.props.posterPath;
+        const adaptedPosterPath =
+            posterUrl.indexOf('https://image.tmdb.org/t/p/w500')!== -1 ?
+                posterUrl :
+                `https://image.tmdb.org/t/p/w500/${posterUrl}`;
+
         const linkToMovie = `https://www.themoviedb.org/movie/${id}`;
 
         return (
@@ -82,6 +119,7 @@ export default class Movie extends Component {
                     <p className = { Styles.infoHeader }>
                         <a className = { Styles.infoHeader_title } href = '#'>{ title }</a>
                         <span className = { Styles.infoHeader_vote }>{ voteAverage }</span>
+                        { crossOrNotCross }
                     </p>
                     <p className = { Styles.meta_flex }>
                         <span className = { Styles.releaseDate }>{ releaseDate }</span>

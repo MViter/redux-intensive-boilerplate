@@ -6,7 +6,6 @@ import types from 'actions/ui/types';
 
 const initialState = Map({
     initialized:  false,
-    authFetching: false,
     feedFetching: false
 });
 
@@ -16,10 +15,16 @@ export default (state = initialState, { type }) => {
             return state.set('initialized', true);
 
         case types.START_FETCHING_FEED:
-            return state.set('feedFetching', true);
+            return {
+                initialized:  true,
+                feedFetching: true
+            };
 
         case types.STOP_FETCHING_FEED:
-            return state.set('feedFetching', false);
+            return {
+                initialized:  true,
+                feedFetching: false
+            };
 
         default:
             return state;

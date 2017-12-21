@@ -19,6 +19,10 @@ const watchlistReduser = (state = initialState, { type, payload }) => {
             return List(payload);
         }
 
+        case types.DELETE_FROM_WATCHLIST_SUCCESS: {
+            return state.update('watchlist', (watchlist) => watchlist.delete(payload));
+        }
+
         default:
             return state;
     }
