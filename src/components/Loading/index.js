@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 // Instruments
 import Styles from './styles.scss';
 
-// Components
-
 export default class Movie extends Component {
 
     render () {
@@ -13,7 +11,8 @@ export default class Movie extends Component {
             <section className = { Styles.loading }>
                 <div className = { Styles.loadingContent }>
                     <div className = { Styles.text }>
-                        <p>Loading page</p>
+                        <p>Loading ...</p>
+                        <p className = { Styles.additionalText } >for now just look at this awesome fruits</p>
                     </div>
                     <div className = { Styles.picture } />
                 </div>

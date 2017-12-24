@@ -6,6 +6,8 @@ import types from 'actions/watchlist/types';
 
 const initialState = Map({
     watchlist: []
+    //watchlist: Map()
+    //watchlist: []
 });
 
 const watchlistReduser = (state = initialState, { type, payload }) => {
@@ -20,7 +22,8 @@ const watchlistReduser = (state = initialState, { type, payload }) => {
         }
 
         case types.DELETE_FROM_WATCHLIST_SUCCESS: {
-            return state.update('watchlist', (watchlist) => watchlist.delete(payload));
+            return List(payload);
+            //return state.set(payload);
         }
 
         default:

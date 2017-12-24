@@ -24,5 +24,10 @@ export default{
     fetchGenresFail: (error) => ({
         type:    types.FETCH_GENRES_FAIL,
         payload: error
+    }),
+
+    fetchMoviesIdWatchlist: (type) => ({
+        type:    types.FETCH_MOVIES,
+        payload: type
     })
 };

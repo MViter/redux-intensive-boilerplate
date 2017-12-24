@@ -12,8 +12,8 @@ export default {
     //     yield takeEvery(types.FETCH_GENRES, fetchGenresWorker);
     // },
     * fetchGenresWatcher () {
-             yield takeEvery(uiTypes.INITIALIZE, fetchGenresWorker);
-         },
+        yield takeEvery(uiTypes.INITIALIZE, fetchGenresWorker);
+    },
     * fetchMoviesWatcher () {
         yield takeEvery(types.FETCH_MOVIES, fetchMoviesWorker);
     }

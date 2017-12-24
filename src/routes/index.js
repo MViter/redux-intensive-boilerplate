@@ -18,11 +18,11 @@ class Routes extends Component {
         fetchGenres: func.isRequired,
         history:     object.isRequired,
         initialize:  func.isRequired,
-        initialized: bool.isRequired,
-        location:    object.isRequired
+        location:    object.isRequired,
+        initialized: bool
     };
 
-    componentDidMount () {
+    componentWillMount () {
         const { initialize, fetchGenres } = this.props;
 
         initialize();

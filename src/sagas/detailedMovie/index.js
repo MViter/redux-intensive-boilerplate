@@ -2,7 +2,7 @@
 import { takeEvery } from 'redux-saga/effects';
 
 // Instruments
-import types from 'actions/feedDetailedMovie/types';
+import types from 'actions/detailedMovie/types';
 import { fetchDetailedMovieWorker } from './workers/fetchDetailedMovie';
 
 export default {

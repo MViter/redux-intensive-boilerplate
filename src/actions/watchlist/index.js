@@ -38,5 +38,18 @@ export default{
     deleteFromWatchlistFail: (message) => ({
         type:    types.DELETE_FROM_WATCHLIST_FAIL,
         payload: message
+    }),
+
+    checkMovieInWatchlist: (movie) => ({
+        type:    types.CHECK_MOVIE_IN_WATCHLIST,
+        payload: movie
+    }),
+    checkMovieInWatchlistSuccess: (result) => ({
+        type:    types.CHECK_MOVIE_IN_WATCHLIST_SUCCESS,
+        payload: result
+    }),
+    checkMovieInWatchlistFail: (message) => ({
+        type:    types.CHECK_MOVIE_IN_WATCHLIST_FAIL,
+        payload: message
     })
 };

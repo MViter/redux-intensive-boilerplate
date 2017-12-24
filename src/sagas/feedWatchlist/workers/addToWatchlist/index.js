@@ -5,7 +5,6 @@ import uiActions from 'actions/ui';
 import watchlistActions from 'actions/watchlist';
 
 export function* addToWatchlistWorker ({ payload: movieToAdd }) {
-    //localStorage.clear();
     try {
         yield put(uiActions.startFetchingFeed());
         let watchlistStorage = JSON.parse(localStorage.getItem('Watchlist'));

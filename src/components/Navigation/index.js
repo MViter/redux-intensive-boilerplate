@@ -11,25 +11,19 @@ import logo from '../../theme/assets/logosmall.png';
 export default class Navigation extends Component {
 
     static propTypes = {
-        fetchNewMovies:      func.isRequired,
-        fetchPopularMovies:  func.isRequired,
-        fetchTopRatedMovies: func.isRequired,
-        fetchUpcomingMovies: func.isRequired,
-        fetchWatchlist:      func.isRequired
+        fetchWatchlist: func
     };
 
     constructor () {
         super();
 
         this.getNavigation = ::this._getNavigation;
-        this.getWatchlist = ::this._getWatchlist;
     }
+
     _getNavigation () {
-
-        const { getWatchlist } = this.props;
-
         return [
             <NavLink
+                exact
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '0'
@@ -37,6 +31,7 @@ export default class Navigation extends Component {
                 Popular
             </NavLink>,
             <NavLink
+                exact
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '1'
@@ -44,6 +39,7 @@ export default class Navigation extends Component {
                 Top-Rated
             </NavLink>,
             <NavLink
+                exact
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '2'
@@ -51,6 +47,7 @@ export default class Navigation extends Component {
                 Upcoming
             </NavLink>,
             <NavLink
+                exact
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '3'
@@ -58,19 +55,16 @@ export default class Navigation extends Component {
                 Now-Playing
             </NavLink>,
             <NavLink
+                exact
                 activeClassName = { Styles.active }
                 className = { Styles.movieTypeMenuBtn }
                 key = '4'
                 title = 'Watchlist'
                 to = { pages.watchlist }
-                onClick = { getWatchlist }>
+                onClick = { this.props.fetchWatchlist }>
                 Watchlist
             </NavLink>
         ];
-    }
-
-    _getWatchlist () {
-        this.props.fetchWatchlist();
     }
 
     render () {

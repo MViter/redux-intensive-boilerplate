@@ -14,17 +14,19 @@ export default class Movie extends Component {
         id:                  number.isRequired,
         index:               string.isRequired,
         overview:            string.isRequired,
-        posterPath:          string.isRequired,
         releaseDate:         string.isRequired,
         title:               string.isRequired,
         voteAverage:         number.isRequired,
+        addToWatchlist:      func,
         deleteFromWatchlist: func,
-        path:                string
+        path:                string,
+        poster_path:         string, // eslint-disable-line camelcase
+        posterPath:          string
     };
 
     static defaultProps = {
         genres:      '',
-        id:          '',
+        id:          0,
         index:       '',
         overview:    '',
         posterPath:  '',
@@ -36,13 +38,12 @@ export default class Movie extends Component {
     constructor () {
         super();
 
-        this.handleLikeMovie = ::this._handleLikeMovie;
-        this.likeDesign = ::this._likeDesign;
-        this.handleDeleteMovie = ::this._handleDeleteMovie;
-
+        this.handleAddMovieToWatchlist = ::this._handleAddMovieToWatchlist;
+        this.heartStyle = ::this._heartStyle;
+        this.handleDeleteMovieFromWatchlist = ::this._handleDeleteMovieFromWatchlist;
     }
 
-    _handleLikeMovie () {
+    _handleAddMovieToWatchlist () {
         const {
             id,
             index,
@@ -68,16 +69,21 @@ export default class Movie extends Component {
         this.props.addToWatchlist(movieToAdd);
     }
 
-    _handleDeleteMovie () {
+    _handleDeleteMovieFromWatchlist () {
         this.props.deleteFromWatchlist(this.props.id);
     }
 
-    _likeDesign () {
-        return <a alt = 'Add to wishlist' className = { Styles.heart } title = { 'Add to Watchlist' } onClick = { this.handleLikeMovie } />;
+    _heartStyle (movieId) {
+        const watchlistStorage = localStorage.getItem('Watchlist') || [];
+        const isMovieInLocalStorage = watchlistStorage.indexOf(movieId) !== -1;
+
+        return isMovieInLocalStorage ?
+            <a className = { Styles.redHeart } title = { 'Delete from Watchlist' } onClick = { this.handleDeleteMovieFromWatchlist } />:
+            <a className = { Styles.blackHeart } title = { 'Add to Watchlist' } onClick = { this.handleAddMovieToWatchlist } />;
+
     }
 
     render () {
-
         const {
             id,
             index,
@@ -89,14 +95,11 @@ export default class Movie extends Component {
             voteAverage
         } = this.props;
 
-
-        const crossOrNotCross = path === '/watchlist' ?
-            <span className = { Styles.cross } onClick = { this.handleDeleteMovie } >x</span> :
+        const abilityToDeleteFromWatchlist = path === '/watchlist' ?
+            <a className = { Styles.cross } title = { 'Delete from Watchlist' } onClick = { this.handleDeleteMovieFromWatchlist } >x</a> :
             null;
 
-        const movieTitle = this.props.title;
-        const addToWatchlist = path !== '/watchlist'? this._likeDesign(movieTitle) : null;
-
+        const abilityToAddToWatchlist = path !== '/watchlist'? this.heartStyle(this.props.id) : null;
 
         const posterUrl = this.props.poster_path ? this.props.poster_path : this.props.posterPath;
         const adaptedPosterPath =
@@ -104,22 +107,16 @@ export default class Movie extends Component {
                 posterUrl :
                 `https://image.tmdb.org/t/p/w500/${posterUrl}`;
 
-        const linkToMovie = `https://www.themoviedb.org/movie/${id}`;
-
         return (
-
             <section className = { Styles.movie } key = { index }>
                 <div className = { Styles.poster } >
-                    <a href = { linkToMovie }>
-                        <img alt = { title } src = { adaptedPosterPath } />
-                    </a>
+                    <img alt = { title } src = { adaptedPosterPath } />
                 </div>
-
                 <div className = { Styles.info }>
                     <p className = { Styles.infoHeader }>
                         <a className = { Styles.infoHeader_title } href = '#'>{ title }</a>
                         <span className = { Styles.infoHeader_vote }>{ voteAverage }</span>
-                        { crossOrNotCross }
+                        { abilityToDeleteFromWatchlist }
                     </p>
                     <p className = { Styles.meta_flex }>
                         <span className = { Styles.releaseDate }>{ releaseDate }</span>
@@ -136,12 +133,10 @@ export default class Movie extends Component {
                             to = { `${pages.detailedmovie}/${id}` }>
                             Details
                         </NavLink>
-                        { addToWatchlist }
+                        { abilityToAddToWatchlist }
                     </p>
-
                 </div>
             </section>
-
         );
     }
 }

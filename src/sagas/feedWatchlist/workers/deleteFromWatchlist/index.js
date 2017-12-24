@@ -4,30 +4,27 @@ import { put } from 'redux-saga/effects';
 import uiActions from 'actions/ui';
 import watchlistActions from 'actions/watchlist';
 
-export function* deleteFromWatchlistWorker ({ payload: movieToAdd }) {
-    //localStorage.clear();
+export function* deleteFromWatchlistWorker ({ payload: id }) {
     try {
+
         yield put(uiActions.startFetchingFeed());
-        let watchlistStorage = JSON.parse(localStorage.getItem('Watchlist'));
 
-        watchlistStorage = watchlistStorage || [];
-        console.log(`watchlistStorage = ${watchlistStorage}, typeof watchlistStorage = ${typeof watchlistStorage}`);
+        const watchlistStorage = localStorage.getItem('Watchlist');
 
-        // if (watchlistStorage) {
-        //     watchlistStorage.push(movieToAdd);
-        //     watchlistStorage = Array.from(new Set(watchlistStorage));
-        // } else {
-        //     watchlistStorage = [movieToAdd];
-        // }
+        if (!watchlistStorage) {
 
-        watchlistStorage.push(movieToAdd);
-        watchlistStorage = Array.from(new Set(watchlistStorage));
+            throw new Error('Watchlist was not found.');
+        }
 
-        localStorage.setItem('Watchlist', JSON.stringify(watchlistStorage));
-        yield put(watchlistActions.addToWatchlistSuccess(watchlistStorage));
+        const movies = JSON.parse(watchlistStorage);
+        const updatedMovieStorage = movies.filter((item) => item.id !== id);
+
+        localStorage.setItem('Watchlist', JSON.stringify(updatedMovieStorage));
+
+        yield put(watchlistActions.deleteFromWatchlistSuccess(updatedMovieStorage));
 
     } catch ({ message }) {
-        yield put(watchlistActions.addToWatchlistFail(message));
+        yield put(watchlistActions.deleteFromWatchlistFail(message));
     } finally {
         yield put(uiActions.stopFetchingFeed());
     }

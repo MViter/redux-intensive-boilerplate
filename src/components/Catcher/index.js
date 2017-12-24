@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Instruments
-import Styles from './styles.scss';
+import Styles from './styles.css';
 
 export default class Catcher extends Component {
     static propTypes = {
-        children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
+        children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
     };
 
     state = {
-        error: false,
+        error: false
     };
 
     componentDidCatch (error, stack) {

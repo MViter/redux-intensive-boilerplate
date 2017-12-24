@@ -6,6 +6,7 @@ import types from 'actions/watchlist/types';
 import { fetchWatchlistWorker } from './workers/fetchWatchlist/index';
 import { addToWatchlistWorker } from './workers/addToWatchlist/index';
 import { deleteFromWatchlistWorker } from './workers/deleteFromWatchlist/index';
+import { checkMovieInWatchlistWorker } from './workers/checkMovieInWatchlist/index';
 
 export default {
     * fetchWatchlistWatcher () {
@@ -18,5 +19,9 @@ export default {
 
     * deleteFromWatchlistWatcher () {
         yield takeEvery(types.DELETE_FROM_WATCHLIST, deleteFromWatchlistWorker);
+    },
+
+    * checkMovieInWatchlistWatcher () {
+        yield takeEvery(types.CHECK_MOVIE_IN_WATCHLIST, checkMovieInWatchlistWorker);
     }
 };

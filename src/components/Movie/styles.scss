@@ -1,12 +1,14 @@
+@import '../../theme/palette';
+
 * {
-  color: #000;
+  color: $paletteColor6;
   font-weight: 400;
   font-family: 'Archivo Black', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $paletteColor6;
   font-weight: normal;
   background: transparent;
 }
@@ -22,7 +24,7 @@ p {
   align-items: center;
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   width: 483px;
-  background-color: #fff;
+  background-color: $paletteColor14;
   box-sizing: border-box;
 
   .poster {
@@ -50,18 +52,19 @@ p {
     box-sizing: border-box;
     padding: 5px 8px 8px 8px;
 
-
-
     .infoHeader {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
       .cross {
-        width: 20px;
-        height: 20px;
+        padding: 0 6px;
         cursor: pointer;
         text-align: center;
+        font-size: 18px;
+        color: $paletteColor11;
+        border: 1px solid $paletteColor13;
+        border-radius: 2px;
       }
 
       .infoHeader_title {
@@ -80,7 +83,7 @@ p {
         align-items: center;
         top: 0;
         padding-left: 4px;
-        color: #000;
+        color: $paletteColor6;
         line-height: 0;
         font-size: 1.1em;
 
@@ -105,7 +108,7 @@ p {
         padding-right: 10px;
         display: inline-flex;
         align-items: center;
-        color: #667;
+        color: $paletteColor12;
 
         &:before {
           content: '📅';
@@ -122,13 +125,13 @@ p {
         overflow: hidden;
         text-overflow: ellipsis;
         font-style: italic;
-        color: #667;
+        color: $paletteColor11;
       }
     }
 
     .overview {
       word-wrap: break-word;
-      color: #4d4d4d;
+      color: $paletteColor12;
       font-size: 0.9em;
       line-height: 1.2em;
       margin-top: 20px;
@@ -140,7 +143,7 @@ p {
     }
 
     .infoFooter {
-      border-top: 2px solid #e3e3e3;
+      border-top: 2px solid $paletteColor13;
       display: flex;
       justify-content: space-between;
       margin-top: 50px;
@@ -157,11 +160,25 @@ p {
         left: 0;
       }
 
-      .heart {
+      .blackHeart {
         font-size: 32px;
         &:after {
           content: '\2665';
-          color: black;
+          color: $paletteColor6;
+          opacity: 1;
+          cursor: pointer;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .redHeart {
+        font-size: 32px;
+        &:after {
+          content: '\2665';
+          color: $paletteColor8;
           opacity: 1;
           cursor: pointer;
         }
